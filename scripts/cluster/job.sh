@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # The body of every batch job. Submit with submit.sh, not directly.
 #   batch:       bash scripts/cluster/submit.sh <stage> <model>
-#   interactive: srun <resources> bash scripts/cluster/job.sh <stage> <model>   (see docs/01_CLUSTER_RUNBOOK.md)
+#   interactive: srun <resources> bash scripts/cluster/job.sh <stage> <model>   (see docs/reproduce.md)
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$HERE/common.sh"
 STAGE=$1; M=${2:-qwen7b}

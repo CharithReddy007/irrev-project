@@ -17,3 +17,4 @@ logs/
 .env
 *.token
 hf_token*
+results/figures_demo/

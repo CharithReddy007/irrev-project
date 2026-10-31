@@ -29,6 +29,7 @@ python -m pip freeze > requirements.lock.txt
 echo
 python - <<'PY'
 import torch, transformers, sklearn
+from transformers import AutoModelForCausalLM   # fails if transformers cannot use this torch
 print("torch", torch.__version__, "| CUDA build", torch.version.cuda, "| GPU visible:", torch.cuda.is_available())
 print("transformers", transformers.__version__, "| sklearn", sklearn.__version__)
 import scienceworld; print("scienceworld import OK")

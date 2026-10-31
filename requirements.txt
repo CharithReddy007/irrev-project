@@ -2,8 +2,9 @@
 # freeze the EXACT versions you used:   pip freeze > requirements.lock.txt
 # and commit requirements.lock.txt (the brief requires exact versions).
 torch>=2.3
-transformers>=4.45,<5
-accelerate>=0.33
+transformers>=4.45,<5   # 5.x needs torch>=2.6 and changed APIs
+accelerate>=0.33,<2
+huggingface_hub<1.0
 numpy>=1.26
 scipy>=1.11
 scikit-learn>=1.4

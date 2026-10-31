@@ -1,109 +1,131 @@
 # Irreversibility Blindness in LLM Agents
 
-Do open-weight LLM agents **represent** whether an action can be undone, and do they **use** that
-when acting? This repository is the full pipeline for ADNN Project Option 1: a tool sandbox with
-exact reversibility labels, a ScienceWorld labeller, linear probes with all controls, direct
-questions, paired agent tasks, the *irreversibility blindness gap*, activation steering (RQ4) and
-next-state uncertainty (RQ5).
+Do open-weight LLM agents **represent** whether an action can be undone, and do they **use**
+that knowledge when they act? This repository holds the complete pipeline, the labelled
+dataset and every result file for ADNN Project Option 1. Models: **Qwen2.5-7B-Instruct** and
+**Llama-3.1-8B-Instruct**, greedy decoding throughout.
 
-New to the project? Read `docs/00_START_HERE.md` first.
+We measure the same thing three ways:
 
-**Running on the supercomputer (SLURM): follow `docs/01_CLUSTER_RUNBOOK.md` step by step.** It has every task in order, the exact `srun` command, and the time to request.
-
-## Git + Jupyter (how the team runs it)
-
-1. **Laptop, once:** unzip, `git init`, commit, push to a **private** GitHub repo, add teammates as collaborators.
-2. **Cluster login node, once per person:** `git clone <repo> ~/irrev-project`, then in a terminal:
-   `bash scripts/cluster/01_check_cluster.sh`, fill `scripts/cluster/cluster.env`, commit and push it,
-   `bash scripts/cluster/02_setup_env.sh` (also registers the Jupyter kernel "irrev (project env)"),
-   `huggingface-cli login`, `bash scripts/cluster/03_download.sh qwen7b` (and `llama8b`, `bytesized`).
-3. **Jupyter:** open `run_on_cluster.ipynb` with the kernel "irrev (project env)" and run the cells in order.
-   Each cell submits a SLURM job, so closing the browser does not stop anything.
-4. **Code changes:** edit on the laptop, `git push`; on the cluster `git pull`. Never commit the HF token.
-
-## Status of the code
-
-| Part | Tested here | Needs your GPU machine |
+| | Question | How |
 |---|---|---|
-| Sandbox, BFS labeller, dataset generator, splits, QC sheets | yes (unit tests) | - |
-| ScienceWorld labeller | yes, on a fake simulator with the same API | run on real ScienceWorld (Java) |
-| Probes, baselines, controls, ablations, statistics, figures | yes, on synthetic hidden states | real hidden states |
-| Agent loop, tasks, caution metrics, gap, McNemar | yes, with scripted policies | real model runs |
-| Model code (hidden states, generation, steering hooks) | **no** (no GPU here) | run `scripts/00_smoke_test.py` first |
-| RQ5 labelling | yes, on the real ByteSized32 test set | scoring needs the model |
+| **RQ1** | Is reversibility *encoded* in the hidden states? | Linear probes on every layer, with baselines and controls |
+| **RQ2** | Does the model *say* it when asked? | Direct question per (state, action) pair, compared with the probe |
+| **RQ3** | Does the agent *act* on it? | 65 paired agent tasks (reversible vs irreversible version); Gap = K − A |
 
-## Setup (GPU machine)
+RQ4 (activation steering) and RQ5 (next-state uncertainty) are implemented but were **not run**.
 
-```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-pip freeze > requirements.lock.txt         # commit this: exact versions (brief, Section 5)
-huggingface-cli login                      # Llama-3.1 is gated: accept the licence first
-java -version                              # ScienceWorld needs Java >= 1.8
-python -m tests.run_all                    # unit tests, CPU only, ~10 s
-python scripts/demo_synthetic.py           # whole pipeline on fake data, ~2 min (outputs are SYNTHETIC)
-python scripts/00_smoke_test.py --model qwen7b
-```
+## Main results
 
-## Pipeline
+All numbers come from the files in `results/` (runs of 31 Oct 2026, one A100 40 GB).
 
-`bash scripts/cluster/job.sh <stage> <model>` runs each stage (inside `srun`, see the runbook); every step is resumable.
-
-| Stage | What it does | RQ |
+| | Qwen2.5-7B | Llama-3.1-8B |
 |---|---|---|
-| `data` | sandbox pairs, ScienceWorld pairs, merged dataset with scenario splits, agent tasks, QC sheet | 4.2-4.3 |
-| `smoke` | checks model loading, action-token span, hidden-state shapes, steering hook, determinism | - |
-| `hidden` | one forward pass per pair, saves every layer (last token and mean over action) | Step 2 |
-| `probes` | probes per layer + majority, lexical, shuffled, control task, layer 0; ablations 1,2,3,4,7 | RQ1 |
-| `stated` | asks the model directly; compares true vs stated vs probe (kappa) | RQ2 |
-| `agent` | 130 episodes (65 pairs), neutral and careful prompt (ablation 5) | RQ3 |
-| `knowledge` | forced choice on each task pair, both orders (K) | gap |
-| `analysis` | behaviour metrics, McNemar, gap = K - A with bootstrap CIs | RQ3 |
-| `steer` | diff-of-means direction, 7 strengths, probe vs 3 random directions | RQ4 |
-| `rq5` | ByteSized32 labelling, NLL scores, AUROC | RQ5 |
-| `figures` | all figures and the ablation table for the report | Sec. 8 |
+| RQ1: probe, binary, balanced accuracy (best layer) | 0.866 (layer 23 of 28) | 0.905 (layer 14 of 32) |
+| RQ1: probe vs best lexical baseline, minimal pairs | 0.856 vs 0.674 | 0.920 vs 0.674 |
+| RQ1: probe, three classes (chance 0.33) | 0.819 | 0.885 |
+| RQ2: default answer when asked | "partially reversible" (89%) | "reversible" (95%) |
+| RQ2: kappa, stated answer vs probe | 0.04 | 0.07 |
+| RQ3: careful in irreversible vs reversible version | 0.02 vs 0.02 | 0.48 vs 0.49 |
+| RQ3: A (more careful when irreversible) | 0.000 | 0.092 |
+| RQ3: K (forced choice correct in both orders; chance 0.25) | 0.246 | 0.308 |
+| RQ3: **Gap = K − A**, 95% CI (neutral prompt) | **0.246** [0.14, 0.35] | **0.215** [0.08, 0.37] |
 
-## Which command makes which figure or table
-
-| Report item | File | Command |
-|---|---|---|
-| Probe accuracy vs layer with baselines | `results/figures/fig_probe_layers_binary_last.pdf` | `probes`, then `figures` |
-| Stated vs probed vs behaviour | `results/figures/fig_three_way.pdf` | `stated`, `agent`, `knowledge`, `analysis`, then `figures` |
-| Blindness gap with CIs | `results/figures/fig_gap.pdf` | `analysis`, then `figures` |
-| Ablation table | `results/figures/table_ablation.tex` | `probes`, then `figures` |
-| Steering curve | `results/figures/fig_steering_<model>_L<l>.pdf` | `steer`, then `figures` |
-| QC agreement (kappa) | printed + JSON | `python -m irrev.data.agreement score ...` |
+**Reading.** Reversibility is linearly decodable from the hidden states of both models, and
+this holds on minimal pairs, where the action text is identical and only one setting differs.
+The information does not reach the answers (each model falls back to one default answer) or
+the behaviour (caution does not depend on reversibility, A ≈ 0). K is close to its chance
+level, so the positive gap mainly reflects A ≈ 0; the probes are the evidence that the
+information is present.
 
 ## Repository layout
 
 ```
-irrev/sandbox/      env.py (the world and 23 tools), render.py (state text), adapter.py (labeller hookup)
-irrev/labeling/     bfs.py - generic reversibility labeller, horizons 1-3 from one search
-irrev/data/         gen_sandbox.py, scienceworld_label.py, toolemu_sheet.py, build.py, agreement.py
+irrev/sandbox/      env.py (simulated workspace, 23 tools), render.py (state as text), adapter.py
+irrev/labeling/     bfs.py: reversibility labeller (search for an undo sequence, horizons 1-3)
+irrev/data/         gen_sandbox.py, scienceworld_label.py, build.py (merge + splits), agreement.py (QC)
 irrev/models/       lm.py (load, generate, hidden states, steering hook), prompts.py, extract.py
-irrev/probes/       run.py - probes + all baselines/controls/ablations
-irrev/stated/       ask.py - RQ2 questions and answer parsing
-irrev/agent/        tasks.py (65 task pairs), loop.py, caution.py, run.py, knowledge.py, direction.py, policies.py
-irrev/rq5/          bytesized.py
-irrev/analysis/     stats.py, compare_rq2.py, rq3_gap.py, rq4_steering.py, figures.py
-scripts/            00_smoke_test.py, cluster/ (job.sh, submit.sh, setup), demo_synthetic.py, demo_agent.py
-docs/               start guide, team plan, pre-registration, data card, slides outline, report draft
-tests/              unit tests + a fake ScienceWorld
+irrev/probes/       run.py: probes per layer + baselines, controls and ablations (RQ1)
+irrev/stated/       ask.py: direct questions and answer parsing (RQ2)
+irrev/agent/        tasks.py (65 task pairs), loop.py, caution.py, run.py, knowledge.py (RQ3)
+irrev/analysis/     stats.py, compare_rq2.py, rq3_gap.py, figures.py
+irrev/rq5/, irrev/agent/direction.py, irrev/analysis/rq4_steering.py   bonus code, not run
+scripts/            00_smoke_test.py, demo_agent.py, demo_synthetic.py, cluster/ (setup + job scripts)
+tests/              unit tests, including a fake ScienceWorld with the same API
+run_on_cluster.ipynb  the notebook that produced every result, with its outputs
+data/               dataset_v1_FROZEN.jsonl (2,553 pairs), agent_tasks.jsonl, QC sheet
+results/<model>/    probes/*.json, stated.jsonl, rq2_*.json, agent/*.jsonl, knowledge.jsonl, rq3_*.json
+results/figures/    report figures (PDF + PNG) and table_ablation.tex
+docs/               reproduce.md, data_card.md, preregistration.md, contribution_log.md, report/
 ```
 
-## Reproducibility rules (from the brief)
+## Reproducing the results
 
-* Greedy decoding everywhere, fixed seeds (`PYTHONHASHSEED=0` is set by the pipeline script).
-* Every prompt and output is saved (`results/<model>/...jsonl`).
-* Never load two models at once; the 14B model with batch size 1.
-* All irreversible actions happen in the simulated sandbox only. No real files, email or accounts. No paid APIs.
+`docs/reproduce.md` lists every step on a SLURM cluster with the exact commands and the
+measured run times. In short:
+
+```bash
+bash scripts/cluster/02_setup_env.sh                 # once: Python venv + Jupyter kernel
+huggingface-cli login                                # Llama-3.1 is gated: accept its licence first
+bash scripts/cluster/03_download.sh qwen7b           # and llama8b
+# inside an srun session with one A100 (or open run_on_cluster.ipynb and run the cells in order):
+bash scripts/cluster/job.sh tests
+bash scripts/cluster/job.sh data
+bash scripts/cluster/job.sh sciworld
+bash scripts/cluster/job.sh build
+for s in smoke hidden probes stated rq2 agent agent_careful knowledge analysis; do
+  bash scripts/cluster/job.sh $s qwen7b                # then the same with llama8b
+done
+bash scripts/cluster/job.sh figures
+```
+
+Without a GPU, `python -m tests.run_all` and `python scripts/demo_synthetic.py` check the
+installation (the demo runs the whole analysis on synthetic data; its outputs say SYNTHETIC).
+
+| Stage | What it does |
+|---|---|
+| `data` | 1,953 sandbox pairs (700 scenarios, seed 0) and the 65 agent task pairs |
+| `sciworld` | 600 ScienceWorld pairs (10 tasks × 5 variations), horizon 2 |
+| `build` | merges both, scenario-level 80/20 splits, freezes `data/dataset_v1_FROZEN.jsonl` |
+| `smoke` | checks model loading, action-token span, hidden-state shapes, steering hook, batching, parsing |
+| `hidden` | one forward pass per pair; saves every layer (last token and mean over the action) |
+| `probes` | 8 probe configurations: main, three-class, mean pooling, minimal-pair training, cross-environment, horizons 1 and 2 |
+| `stated`, `rq2` | direct questions; stated vs true vs cross-fitted probe (kappa) |
+| `agent`, `agent_careful` | 130 episodes each (65 pairs), neutral and "be careful" system prompt |
+| `knowledge`, `analysis` | forced choice per pair in both orders (K); A, McNemar, Gap with bootstrap CIs |
+| `figures` | the four report figures and the ablation table |
+
+| Report item | File |
+|---|---|
+| Probe accuracy vs layer, with baselines | `results/figures/fig_probe_layers_binary_last.pdf`, `..._three_last.pdf` |
+| Encodes / says / does | `results/figures/fig_three_way.pdf` |
+| Blindness gap with CIs | `results/figures/fig_gap.pdf` |
+| Ablation table | `results/figures/table_ablation.tex` |
+| Demo transcript | `results/demo_dedupe_01.txt` (`scripts/demo_agent.py --model qwen7b --pair dedupe_01`) |
+
+## Pre-registration and deviations
+
+The analysis plan was committed before any agent run (`docs/preregistration.md`, commit
+`6ab8750`). Changes made afterwards are listed in its Deviations table: the control task is
+reported but not used for conclusions, the tool-call parser also accepts the format Llama
+uses, and the three-way figure shows balanced accuracy.
+
+## Reproducibility notes
+
+* Greedy decoding, fixed seeds, `PYTHONHASHSEED=0`; bfloat16 on A100 (`IRREV_DTYPE`).
+* Exact package versions: `requirements.lock.txt`. transformers must be < 5 with torch 2.5.
+* Every prompt and model output is saved in `results/<model>/`.
+* Agent runs generate many episodes in one batch. In bfloat16, batched and single-episode
+  generation can diverge after a few steps, so `scripts/demo_agent.py` (single episode) can
+  differ from the logged episode. All reported numbers use the logged batched runs.
+* CPU stages run with one BLAS thread per process (`common.sh`); on a busy shared node,
+  multi-threaded BLAS made `rq2` more than ten times slower.
+* All "irreversible" actions happen inside the simulated sandbox. No real files, email or money.
 
 ## Data and licences
 
-* Generated sandbox data: yours to release.
-* ScienceWorld: Apache-2.0 (LICENSE file in the repository, checked October 2026).
-* ToolEmu test cases: Apache-2.0. Only the case descriptions are used; the emulator is never run.
-* ByteSized32-State-Prediction: no licence file; research use only, do not redistribute.
+* Sandbox data: generated by this code.
+* ScienceWorld: Apache-2.0.
+* ByteSized32-State-Prediction (RQ5, not run): no licence file; research use only, not redistributed.
 * Llama-3.1: Llama 3.1 Community License and Acceptable Use Policy.
-* `docs/report/acl.sty` and `acl_natbib.bst` are from github.com/acl-org/acl-style-files.
-Re-check all licences before releasing anything.
+* `docs/report/acl.sty` and `acl_natbib.bst`: github.com/acl-org/acl-style-files.

@@ -18,6 +18,8 @@ elif [ -d "$ENV_DIR" ]; then
 fi
 
 export PYTHONHASHSEED=0
+# one BLAS thread per process: on a busy shared node multi-threaded BLAS made rq2 >10x slower
+export OMP_NUM_THREADS=${OMP_NUM_THREADS:-1} OPENBLAS_NUM_THREADS=${OPENBLAS_NUM_THREADS:-1} MKL_NUM_THREADS=${MKL_NUM_THREADS:-1}
 export TOKENIZERS_PARALLELISM=false
 # Compute nodes often have no internet: use only the pre-downloaded cache.
 export HF_HUB_OFFLINE=${HF_HUB_OFFLINE:-1}

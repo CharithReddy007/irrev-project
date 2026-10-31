@@ -1,70 +1,103 @@
-# Data card: Reversibility-labelled (state, action) pairs
-
-*Fill every [bracket] from your final files. Numbers below in plain text are from the current
-sandbox generator (seed 0, 700 scenarios) and will change once ScienceWorld is added.*
+# Data card: reversibility-labelled (state, action) pairs
 
 ## Summary
-Labelled (state, action) pairs for studying whether LLM agents represent the reversibility of
-actions. Each pair is labelled reversible, partially reversible or irreversible by a bounded
-breadth-first search in the environment.
 
-## Files and format
-`dataset.jsonl`, one JSON object per line. Required fields:
+2,553 (state, action) pairs from two environments, each labelled reversible, partially
+reversible or irreversible by a bounded search for an undo sequence. Built to test whether
+LLM agents represent the reversibility of actions. File: `data/dataset_v1_FROZEN.jsonl`
+(frozen in commit `41cebdf`, 31 Oct 2026). Agent tasks: `data/agent_tasks.jsonl` (65 pairs).
+
+## Label definition
+
+Starting from state s0, apply the action, then search all action sequences of length up to H:
+- **reversible**: some sequence restores s0 exactly;
+- **partially reversible**: some sequence restores s0 only approximately (e.g. a version
+  counter moved, a fee was charged, a small temperature drift);
+- **irreversible**: no sequence of length ≤ H restores s0, even approximately.
+
+Undo candidates use only information the agent itself has (the current state and the
+arguments of the action just taken). Otherwise `edit_file` would always look reversible,
+because the search could retype text it never saw. Code: `irrev/labeling/bfs.py`.
+
+## Format
+
+One JSON object per line.
 
 | Field | Meaning |
 |---|---|
 | `id` | unique id |
 | `environment` | `sandbox` or `scienceworld` |
 | `state_text` | the state as shown to the model |
-| `action_text` | the candidate action (JSON tool call in the sandbox, a command in ScienceWorld) |
-| `label` | `reversible` / `partially_reversible` / `irreversible` at the main horizon |
-| `horizon` | main horizon (3) |
-| `source` | `generated`, `scienceworld:<task>` or `toolemu:<case>` |
-
-Extra fields: `scenario_id`, `group_id` (minimal-pair group), `is_minimal_pair`, `verb`,
-`labels_by_horizon` (1, 2, 3), `task_text`, `settings`, `bfs` (search depth, nodes, truncation),
-`volatile` (ScienceWorld), `split`, `split_0..2`.
+| `action_text` | the action (a JSON tool call in the sandbox, a command in ScienceWorld) |
+| `label` | label at the main horizon |
+| `horizon` | main horizon: 3 (sandbox), 2 (ScienceWorld) |
+| `labels_by_horizon` | labels for each horizon up to the main one, from the same search |
+| `source` | `generated` or `scienceworld:<task>` |
+| `scenario_id` | scenario; all pairs of a scenario are in the same split |
+| `group_id`, `is_minimal_pair` | minimal-pair group: same action, state texts differ in one setting line |
+| `verb` | action verb (tool name or ScienceWorld verb) |
+| `split`, `split_0..2` | main split and three alternative 80/20 scenario-level splits |
+| `bfs` | search statistics: depths found, nodes expanded, truncation |
+| `undo_witness`, `volatile`, `tolerances` | ScienceWorld only: the undo sequence found, whether the state changes on its own, numeric tolerances |
 
 ## How it was built
-- **Sandbox**: random workspaces (3-7 files, random settings), one minimal-pair group plus up to
-  three ordinary actions per scenario. Labels from the BFS labeller with relevance pruning
-  (verified equal to the full search on random small states, `tests/test_labeling.py`).
-- **ScienceWorld**: states sampled along gold trajectories of [tasks] x [variations], with easy
-  simplifications (teleport, open doors, no electrical actions). Labels by reload-and-replay BFS
-  over valid actions mentioning an object of the labelled action (branching cap [20]).
-- **ToolEmu-derived** (if used): [n] pairs written by hand from the 144 curated case descriptions.
+
+**Sandbox** (`irrev/sandbox/`, `irrev/data/gen_sandbox.py`): a simulated workspace (files,
+recycle bin, backups, version history, email outbox, wallet) with 23 tools. Four settings
+decide reversibility: recycle bin on/off, edit history on/off, email undo window, and
+transfer mode (instant / pending / pending with a fee). 700 random scenarios (seed 0), each
+with one minimal-pair group plus ordinary actions. Labels at horizon 3, with relevance
+pruning that `tests/test_labeling.py` checks against the full search.
+
+**ScienceWorld** (`irrev/data/scienceworld_label.py`): 10 tasks (boil, melt, freeze,
+change-the-state-of-matter-of, chemistry-mix, chemistry-mix-paint-secondary-color,
+use-thermometer, measure-melting-point-known-substance, grow-plant, find-living-thing) ×
+5 variations; 4 states per episode along the gold trajectory, 3 sampled actions per state.
+Actions are filtered to sensible ones (e.g. pour only from containers), and actions that
+change nothing are dropped (150). Horizon 2, branching cap 8. States are compared on the full
+object tree, with numbers equal within 2.0 °C (exact) or 10.0 °C (approximate), and against
+the state the world would have reached anyway (time passes on every step).
 
 ## Composition
-| | Reversible | Partial | Irreversible | Total | Minimal-pair share |
-|---|---|---|---|---|---|
-| Sandbox (current) | 858 | 305 | 790 | 1,953 | 60.5% |
-| ScienceWorld | [ ] | [ ] | [ ] | [ ] | [ ] |
-| **Total** | [ ] | [ ] | [ ] | [ ] | [ ] |
 
-Labels by horizon (sandbox, current): h=1: 704 / 406 / 843; h=2 and h=3: 858 / 305 / 790.
+| | Reversible | Partial | Irreversible | Total | Minimal-pair share | Test split |
+|---|---|---|---|---|---|---|
+| Sandbox | 858 | 305 | 790 | 1,953 | 60.5% | 406 |
+| ScienceWorld | 384 | 33 | 183 | 600 | 2.0% | 120 |
+| **Total** | 1,242 | 338 | 973 | 2,553 | **46.7%** | 526 |
 
-Classes are not perfectly balanced (the partial class is smaller); all results use balanced accuracy.
+Sandbox labels by horizon: h=1: 704 / 406 / 843; h=2 and h=3: 858 / 305 / 790 (no label
+changes between 2 and 3 steps). ScienceWorld: 0.5% of states are volatile.
+Classes are not balanced; all probe results use balanced accuracy.
 
 ## Splits
-20% of scenarios per environment form the test set (seed 12345); three more scenario-level splits
-(`split_0..2`) are used for the repeated probe runs. Members of a minimal-pair group always share a
-split.
+
+20% of scenarios per environment form the test set (seed 12345). Three more scenario-level
+80/20 splits (`split_0..2`) are used for repeated probe runs. Members of a minimal-pair group
+always share a split.
 
 ## Quality control
-Two annotators labelled the same 100 random pairs blind to the automatic label.
-Cohen's kappa A-B: [ ]; A-auto: [ ]; B-auto: [ ]. Main disagreement types: [ ].
+
+`data/qc_sheet.csv`: 100 random pairs to label without seeing the automatic label (the key
+is in `data/qc_key.json`). Agreement: `python -m irrev.data.agreement score --sheet
+data/qc_sheet_filled.csv --key data/qc_key.json`.
+Cohen's kappa annotator A vs B: [to fill]; A vs labeller: [to fill]; B vs labeller: [to fill].
 
 ## Known limitations
-- Synthetic, short sandbox states; settings are stated explicitly in text, so the task partly tests
-  reading comprehension of settings combined with action semantics.
-- Bounded horizon (<= 3) and restricted inverse-candidate sets; some "irreversible" labels may be
-  reversible with longer plans.
-- ScienceWorld time passes on every step; [x]% of states are volatile.
-- Setting phrases ("cannot be cancelled") give a lexical cue in the state text; a bag-of-words
-  over state + action reaches ~0.68 balanced accuracy on sandbox minimal pairs.
+
+- Sandbox states are short and synthetic, and the settings are stated in the text, so a
+  bag-of-words over state + action already reaches 0.674 balanced accuracy on minimal pairs.
+  Probe results are compared against that baseline.
+- Bounded horizon (3 sandbox, 2 ScienceWorld) and restricted undo candidates: some
+  "irreversible" labels may be reversible with longer plans.
+- ScienceWorld: 27 of 153 movement actions are not labelled reversible (likely because an
+  ongoing process keeps changing the state), and a few "partially reversible" actions only
+  nudge a number within tolerance.
+- Only 2% of ScienceWorld pairs are minimal pairs; the minimal-pair analyses rest mainly on
+  the sandbox.
 - English only.
 
-## Licence and intended use
-Research on agent safety and interpretability. Sandbox data: [your licence, e.g. CC BY 4.0].
-ScienceWorld-derived data follows ScienceWorld's Apache-2.0 licence. Do not include
-ByteSized32-derived data in the release.
+## Intended use and licence
+
+Research on agent safety and interpretability. Sandbox data: generated by this code.
+ScienceWorld-derived pairs follow ScienceWorld's Apache-2.0 licence.
