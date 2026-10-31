@@ -66,3 +66,4 @@ results excluding volatile ScienceWorld states.
 | Date | Change | Reason |
 |---|---|---|
 | | | |
+| 2026-10-31 | Selectivity (control task) reported but not used for conclusions | Control labels were assigned per verb type; with ~25 verb types, which appear verbatim in the action text, the control task is trivially decodable (0.999) and measures verb identity, not probe memorisation. The minimal-pair probe-vs-lexical comparison (pre-registered main comparison) is used instead to rule out verb shortcuts. |
