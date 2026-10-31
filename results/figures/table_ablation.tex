@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering\small
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{Qwen2.5-7B} & \multicolumn{2}{c}{Llama-3.1-8B} \\
+Setting & All & Min.\ pairs & All & Min.\ pairs \\
+\midrule
+Main (binary, last token, all data) & 0.87$\pm$0.01 & 0.86$\pm$0.01 & 0.90$\pm$0.01 & 0.92$\pm$0.01 \\
+Token position: mean over action & 0.88$\pm$0.01 & 0.89$\pm$0.03 & 0.92$\pm$0.01 & 0.94$\pm$0.01 \\
+Train on minimal pairs only & 0.72$\pm$0.01 & 0.86$\pm$0.01 & 0.79$\pm$0.02 & 0.91$\pm$0.00 \\
+Transfer: sandbox $\rightarrow$ ScienceWorld & 0.64$\pm$0.00 & 0.50$\pm$0.00 & 0.59$\pm$0.00 & 0.50$\pm$0.00 \\
+Transfer: ScienceWorld $\rightarrow$ sandbox & 0.56$\pm$0.00 & 0.50$\pm$0.00 & 0.57$\pm$0.00 & 0.54$\pm$0.00 \\
+Horizon 1 & 0.84$\pm$0.01 & 0.85$\pm$0.03 & 0.88$\pm$0.00 & 0.90$\pm$0.00 \\
+Horizon 2 & 0.87$\pm$0.01 & 0.86$\pm$0.01 & 0.90$\pm$0.01 & 0.92$\pm$0.01 \\
+Three-class labels & 0.82$\pm$0.01 & 0.83$\pm$0.03 & 0.88$\pm$0.01 & 0.89$\pm$0.02 \\
+\bottomrule
+\end{tabular}
+\caption{Probe balanced accuracy at the best layer (mean $\pm$ std over 3 scenario splits).}
+\label{tab:ablation}
+\end{table}

@@ -116,7 +116,7 @@ def fig_three_way(models, out, wm=None):
     for m in models:
         bars.append((m, [
             ("Probe\n(bal. acc.)", _get(f"results/{m}/rq2_binary.json", "probe_vs_true", "balanced_accuracy")),
-            ("Stated\n(accuracy)", _get(f"results/{m}/rq2_binary.json", "stated_vs_true", "accuracy")),
+            ("Stated\n(bal. acc.)", _get(f"results/{m}/rq2_binary.json", "stated_vs_true", "balanced_accuracy")),
             ("Stated on\ntask pairs (K)", _get(f"results/{m}/rq3_neutral.json", "K_forced_choice", "rate")),
             ("Acts on\ntask pairs (A)", _get(f"results/{m}/rq3_neutral.json", "A_score", "rate")),
         ]))
@@ -138,6 +138,10 @@ def fig_three_way(models, out, wm=None):
                 ax.text(r.get_x() + r.get_width() / 2, r.get_height() + 0.01, f"{v[1]:.2f}", ha="center", va="bottom",
                         fontsize=6, color=C["text"])
     ax.set_xticks(x, labels)
+    # chance level of each measure: 0.5 for balanced accuracy, 0.25 for K (correct in both orders)
+    for xi, ch in zip(x[:3], [0.5, 0.5, 0.25]):
+        ax.hlines(ch, xi - 0.45, xi + 0.45, colors=C["text"], linestyles=":", linewidth=1)
+    ax.plot([], [], ":", color=C["text"], linewidth=1, label="chance")
     ax.set_ylim(0, 1.1)
     ax.set_ylabel("fraction")
     ax.legend(frameon=False, loc="upper right")
