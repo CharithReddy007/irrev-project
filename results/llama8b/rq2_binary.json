@@ -1,0 +1,60 @@
+{
+ "layer": 14,
+ "task": "binary",
+ "n": 2215,
+ "unparsed": 0,
+ "stated_partial_on_binary": 3,
+ "stated_vs_true": {
+  "n": 2215,
+  "balanced_accuracy": 0.5305742983253149,
+  "macro_f1": 0.4391168747164588,
+  "accuracy": 0.5846501128668171,
+  "accuracy_ci": [
+   0.5644923097749686,
+   0.6030864349142167
+  ]
+ },
+ "probe_vs_true": {
+  "n": 2215,
+  "balanced_accuracy": 0.9130058272222801,
+  "macro_f1": 0.9133269662481684,
+  "accuracy": 0.9146726862302483
+ },
+ "kappa_stated_probe": 0.06874649936318444,
+ "kappa_stated_true": 0.06945920106871606,
+ "kappa_probe_true": 0.8266556910439499,
+ "kappa_stated_probe_ci": [
+  0.04689461726913253,
+  0.08994442761967196
+ ],
+ "cells": {
+  "both_correct": 1204,
+  "probe_correct_stated_wrong": 822,
+  "stated_correct_probe_wrong": 91,
+  "both_wrong": 98
+ },
+ "confusion_stated (rows=true)": [
+  [
+   1212,
+   28
+  ],
+  [
+   889,
+   83
+  ]
+ ],
+ "confusion_probe (rows=true)": [
+  [
+   1151,
+   91
+  ],
+  [
+   98,
+   875
+  ]
+ ],
+ "minimal_pairs": {
+  "stated_acc": 0.5526570048309178,
+  "probe_acc": 0.9198067632850242
+ }
+}
