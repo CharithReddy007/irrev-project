@@ -52,6 +52,18 @@ def parse_tool_call(text: str):
                 except json.JSONDecodeError:
                     pass
                 break
+    # lenient: {"<tool_name>": {args}} - an alternative format some models use (e.g. Llama-3.1)
+    from irrev.sandbox.env import TOOL_SPECS
+    dec = json.JSONDecoder()
+    for m in re.finditer(r"\{", text):
+        try:
+            obj, _ = dec.raw_decode(text, m.start())
+        except json.JSONDecodeError:
+            continue
+        if isinstance(obj, dict) and len(obj) == 1:
+            (k, v), = obj.items()
+            if k in TOOL_SPECS and isinstance(v, dict):
+                return {"tool": k, "args": v}, "lenient"
     return None, "failed"
 
 
