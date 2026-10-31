@@ -1,0 +1,74 @@
+{
+ "layer": 22,
+ "task": "three",
+ "n": 2553,
+ "unparsed": 0,
+ "stated_partial_on_binary": 0,
+ "stated_vs_true": {
+  "n": 2553,
+  "balanced_accuracy": 0.33786679845484974,
+  "macro_f1": 0.14956629995945564,
+  "accuracy": 0.16882099490795144,
+  "accuracy_ci": [
+   0.15269080421933168,
+   0.18452488739237122
+  ]
+ },
+ "probe_vs_true": {
+  "n": 2553,
+  "balanced_accuracy": 0.8212306392731952,
+  "macro_f1": 0.8239018086052209,
+  "accuracy": 0.8374461417939679
+ },
+ "kappa_stated_probe": 0.012549745518593114,
+ "kappa_stated_true": 0.007678337395146229,
+ "kappa_probe_true": 0.7287359470731763,
+ "kappa_stated_probe_ci": [
+  0.003634737048521969,
+  0.02201884161711863
+ ],
+ "cells": {
+  "both_correct": 350,
+  "probe_correct_stated_wrong": 1788,
+  "stated_correct_probe_wrong": 81,
+  "both_wrong": 334
+ },
+ "confusion_stated (rows=true)": [
+  [
+   30,
+   1145,
+   67
+  ],
+  [
+   14,
+   299,
+   25
+  ],
+  [
+   36,
+   835,
+   102
+  ]
+ ],
+ "confusion_probe (rows=true)": [
+  [
+   1076,
+   23,
+   143
+  ],
+  [
+   44,
+   262,
+   32
+  ],
+  [
+   130,
+   43,
+   800
+  ]
+ ],
+ "minimal_pairs": {
+  "stated_acc": 0.16596814752724226,
+  "probe_acc": 0.829002514668902
+ }
+}
