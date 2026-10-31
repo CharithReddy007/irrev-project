@@ -1,0 +1,402 @@
+{
+ "0": {
+  "id": "sw_measure-melting-point-known-substance_0_t4_94705f68a6",
+  "auto": "reversible"
+ },
+ "1": {
+  "id": "sb0083_g_trash_off",
+  "auto": "irreversible"
+ },
+ "2": {
+  "id": "sb0331_g_immediate",
+  "auto": "irreversible"
+ },
+ "3": {
+  "id": "sb0457_g_trash_off",
+  "auto": "reversible"
+ },
+ "4": {
+  "id": "sb0694_g_history_only",
+  "auto": "partially_reversible"
+ },
+ "5": {
+  "id": "sb0423_s2",
+  "auto": "irreversible"
+ },
+ "6": {
+  "id": "sb0152_g_backup_and_history",
+  "auto": "reversible"
+ },
+ "7": {
+  "id": "sb0664_g_backup_and_history",
+  "auto": "reversible"
+ },
+ "8": {
+  "id": "sb0288_g_trash_on",
+  "auto": "reversible"
+ },
+ "9": {
+  "id": "sb0042_s2",
+  "auto": "irreversible"
+ },
+ "10": {
+  "id": "sb0396_g_trash_on",
+  "auto": "reversible"
+ },
+ "11": {
+  "id": "sb0036_g_pending_fee",
+  "auto": "partially_reversible"
+ },
+ "12": {
+  "id": "sb0312_s1",
+  "auto": "partially_reversible"
+ },
+ "13": {
+  "id": "sw_melt_1_t4_6839da4be6",
+  "auto": "reversible"
+ },
+ "14": {
+  "id": "sb0050_s0",
+  "auto": "reversible"
+ },
+ "15": {
+  "id": "sb0404_s0",
+  "auto": "reversible"
+ },
+ "16": {
+  "id": "sb0127_g_undo_window",
+  "auto": "reversible"
+ },
+ "17": {
+  "id": "sb0040_g_history_only",
+  "auto": "partially_reversible"
+ },
+ "18": {
+  "id": "sb0158_g_pending",
+  "auto": "reversible"
+ },
+ "19": {
+  "id": "sw_find-living-thing_4_t0_0028aec44b",
+  "auto": "irreversible"
+ },
+ "20": {
+  "id": "sb0695_g_backup_and_history",
+  "auto": "reversible"
+ },
+ "21": {
+  "id": "sb0048_g_undo_window",
+  "auto": "reversible"
+ },
+ "22": {
+  "id": "sw_grow-plant_2_t2_0c7ac7748f",
+  "auto": "reversible"
+ },
+ "23": {
+  "id": "sb0072_s1",
+  "auto": "reversible"
+ },
+ "24": {
+  "id": "sb0416_g_trash_off",
+  "auto": "irreversible"
+ },
+ "25": {
+  "id": "sb0473_s1",
+  "auto": "irreversible"
+ },
+ "26": {
+  "id": "sb0521_s1",
+  "auto": "partially_reversible"
+ },
+ "27": {
+  "id": "sw_chemistry-mix-paint-secondary-color_4_t6_0028aec44b",
+  "auto": "irreversible"
+ },
+ "28": {
+  "id": "sb0304_s2",
+  "auto": "irreversible"
+ },
+ "29": {
+  "id": "sb0497_g_pending_fee",
+  "auto": "partially_reversible"
+ },
+ "30": {
+  "id": "sb0596_g_trash_on",
+  "auto": "reversible"
+ },
+ "31": {
+  "id": "sw_chemistry-mix_1_t3_29f366a4b7",
+  "auto": "reversible"
+ },
+ "32": {
+  "id": "sb0628_g_trash_on",
+  "auto": "reversible"
+ },
+ "33": {
+  "id": "sb0155_g_undo_window",
+  "auto": "reversible"
+ },
+ "34": {
+  "id": "sb0317_s0",
+  "auto": "partially_reversible"
+ },
+ "35": {
+  "id": "sb0364_s2",
+  "auto": "irreversible"
+ },
+ "36": {
+  "id": "sb0094_g_trash_on",
+  "auto": "reversible"
+ },
+ "37": {
+  "id": "sb0145_s0",
+  "auto": "reversible"
+ },
+ "38": {
+  "id": "sb0235_g_trash_off",
+  "auto": "irreversible"
+ },
+ "39": {
+  "id": "sw_grow-plant_1_t13_bccda87969",
+  "auto": "irreversible"
+ },
+ "40": {
+  "id": "sb0041_s0",
+  "auto": "partially_reversible"
+ },
+ "41": {
+  "id": "sw_chemistry-mix-paint-secondary-color_0_t9_5fae3c4a87",
+  "auto": "reversible"
+ },
+ "42": {
+  "id": "sw_measure-melting-point-known-substance_3_t11_73f125bf99",
+  "auto": "reversible"
+ },
+ "43": {
+  "id": "sb0044_g_trash_off",
+  "auto": "irreversible"
+ },
+ "44": {
+  "id": "sb0065_s1",
+  "auto": "partially_reversible"
+ },
+ "45": {
+  "id": "sb0227_s1",
+  "auto": "irreversible"
+ },
+ "46": {
+  "id": "sb0309_g_old_backup_exists",
+  "auto": "irreversible"
+ },
+ "47": {
+  "id": "sw_freeze_2_t10_254c22d2ba",
+  "auto": "reversible"
+ },
+ "48": {
+  "id": "sb0063_g_nothing",
+  "auto": "irreversible"
+ },
+ "49": {
+  "id": "sb0604_s1",
+  "auto": "partially_reversible"
+ },
+ "50": {
+  "id": "sw_freeze_0_t1_667eb5a488",
+  "auto": "reversible"
+ },
+ "51": {
+  "id": "sw_chemistry-mix_0_t8_75dca905cd",
+  "auto": "reversible"
+ },
+ "52": {
+  "id": "sw_melt_1_t1_6bc9740939",
+  "auto": "reversible"
+ },
+ "53": {
+  "id": "sb0388_g_immediate",
+  "auto": "irreversible"
+ },
+ "54": {
+  "id": "sb0498_g_trash_on",
+  "auto": "reversible"
+ },
+ "55": {
+  "id": "sw_grow-plant_4_t12_e57ae765a5",
+  "auto": "reversible"
+ },
+ "56": {
+  "id": "sb0466_g_no_old_backup",
+  "auto": "reversible"
+ },
+ "57": {
+  "id": "sb0060_s2",
+  "auto": "irreversible"
+ },
+ "58": {
+  "id": "sb0426_s0",
+  "auto": "irreversible"
+ },
+ "59": {
+  "id": "sb0041_g_trash_on",
+  "auto": "reversible"
+ },
+ "60": {
+  "id": "sb0086_g_backup",
+  "auto": "reversible"
+ },
+ "61": {
+  "id": "sb0266_g_trash_on",
+  "auto": "reversible"
+ },
+ "62": {
+  "id": "sb0035_s0",
+  "auto": "reversible"
+ },
+ "63": {
+  "id": "sw_boil_3_t3_73f125bf99",
+  "auto": "reversible"
+ },
+ "64": {
+  "id": "sb0450_g_history_only",
+  "auto": "partially_reversible"
+ },
+ "65": {
+  "id": "sb0409_s0",
+  "auto": "partially_reversible"
+ },
+ "66": {
+  "id": "sb0459_g_backup",
+  "auto": "reversible"
+ },
+ "67": {
+  "id": "sb0028_g_history_only",
+  "auto": "partially_reversible"
+ },
+ "68": {
+  "id": "sw_change-the-state-of-matter-of_0_t9_664dde53f3",
+  "auto": "irreversible"
+ },
+ "69": {
+  "id": "sb0412_g_undo_window",
+  "auto": "reversible"
+ },
+ "70": {
+  "id": "sw_chemistry-mix-paint-secondary-color_0_t9_0028aec44b",
+  "auto": "irreversible"
+ },
+ "71": {
+  "id": "sw_grow-plant_3_t10_a6a4336f1d",
+  "auto": "irreversible"
+ },
+ "72": {
+  "id": "sb0371_s2",
+  "auto": "irreversible"
+ },
+ "73": {
+  "id": "sb0171_g_instant",
+  "auto": "irreversible"
+ },
+ "74": {
+  "id": "sb0102_s2",
+  "auto": "irreversible"
+ },
+ "75": {
+  "id": "sb0067_s0",
+  "auto": "reversible"
+ },
+ "76": {
+  "id": "sb0106_s2",
+  "auto": "irreversible"
+ },
+ "77": {
+  "id": "sw_freeze_4_t1_667eb5a488",
+  "auto": "reversible"
+ },
+ "78": {
+  "id": "sb0223_g_trash_on",
+  "auto": "reversible"
+ },
+ "79": {
+  "id": "sb0289_g_pending_fee",
+  "auto": "partially_reversible"
+ },
+ "80": {
+  "id": "sb0131_g_history_only",
+  "auto": "partially_reversible"
+ },
+ "81": {
+  "id": "sw_melt_1_t3_572c9c43e7",
+  "auto": "reversible"
+ },
+ "82": {
+  "id": "sb0034_g_trash_on",
+  "auto": "reversible"
+ },
+ "83": {
+  "id": "sb0599_s1",
+  "auto": "partially_reversible"
+ },
+ "84": {
+  "id": "sw_chemistry-mix-paint-secondary-color_4_t2_73f8175916",
+  "auto": "reversible"
+ },
+ "85": {
+  "id": "sb0401_g_trash_on",
+  "auto": "reversible"
+ },
+ "86": {
+  "id": "sb0420_g_backup_and_history",
+  "auto": "reversible"
+ },
+ "87": {
+  "id": "sb0424_g_old_backup_exists",
+  "auto": "irreversible"
+ },
+ "88": {
+  "id": "sb0391_g_instant",
+  "auto": "irreversible"
+ },
+ "89": {
+  "id": "sb0271_g_pending",
+  "auto": "reversible"
+ },
+ "90": {
+  "id": "sb0673_g_backup_and_history",
+  "auto": "reversible"
+ },
+ "91": {
+  "id": "sb0411_g_undo_window",
+  "auto": "reversible"
+ },
+ "92": {
+  "id": "sw_use-thermometer_0_t10_ec95784d1b",
+  "auto": "reversible"
+ },
+ "93": {
+  "id": "sb0305_g_trash_on",
+  "auto": "reversible"
+ },
+ "94": {
+  "id": "sw_chemistry-mix_4_t8_1b22cbde90",
+  "auto": "reversible"
+ },
+ "95": {
+  "id": "sb0209_s1",
+  "auto": "reversible"
+ },
+ "96": {
+  "id": "sb0407_s2",
+  "auto": "irreversible"
+ },
+ "97": {
+  "id": "sb0341_g_backup",
+  "auto": "reversible"
+ },
+ "98": {
+  "id": "sb0568_g_pending_fee",
+  "auto": "partially_reversible"
+ },
+ "99": {
+  "id": "sw_measure-melting-point-known-substance_0_t14_29f366a4b7",
+  "auto": "reversible"
+ }
+}
