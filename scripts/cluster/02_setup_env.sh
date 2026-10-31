@@ -19,7 +19,7 @@ fi
 source "$ENV_DIR/bin/activate"
 python -m pip install --upgrade pip
 python -m pip install torch --index-url https://download.pytorch.org/whl/$TORCH_CUDA
-python -m pip install "transformers>=4.45" "accelerate>=0.33" "huggingface_hub" numpy scipy \
+python -m pip install "transformers>=4.45,<5" "accelerate>=0.33,<2" "huggingface_hub<1.0" numpy scipy \
     "scikit-learn>=1.4" joblib matplotlib pandas pytest scienceworld ipykernel
 # register the environment as a Jupyter kernel called "irrev (project env)"
 python -m ipykernel install --user --name irrev --display-name "irrev (project env)"
