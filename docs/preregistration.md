@@ -4,7 +4,7 @@
 result.** The brief (Section 7.4) requires deciding the analysis before seeing the test set.
 Changes after that date go in the "Deviations" section at the bottom, with a reason.
 
-Date committed: ____________   Commit hash: ____________
+Date committed: 2026-10-31   Commit hash: ____________
 
 ## Hypotheses (directional, but either answer is a result)
 
@@ -16,6 +16,9 @@ Date committed: ____________   Commit hash: ____________
 - H4 (RQ4, bonus): adding the probe direction increases careful behaviour monotonically; random
   directions of the same norm do not.
 - H5 (RQ5, bonus): next-state uncertainty differs between irreversible and reversible transitions.
+
+Scope: RQ1-RQ3 are the main study. RQ4 and RQ5 (bonus) are optional and may not be run;
+if they are run, they are analysed exactly as specified below.
 
 ## Primary measures (fixed)
 
@@ -43,7 +46,9 @@ results excluding volatile ScienceWorld states.
 
 - Models: Qwen2.5-7B-Instruct (main), Llama-3.1-8B-Instruct; optional Qwen2.5-14B-Instruct.
 - Greedy decoding, seeds 0; max 15 agent steps; max 200 new tokens per step.
-- Labelling horizon 3 for main results; 1 and 2 as ablation.
+- Labelling horizon: sandbox H=3 for main results (1 and 2 as ablation); ScienceWorld H=2
+  (compute cost), numeric tolerances 2.0 exact / 10.0 approximate. Dataset frozen as
+  data/dataset_v1_FROZEN.jsonl (2,553 records) in commit 41cebdf.
 - Probe: standardised features, L2 logistic regression, C in {0.001, 0.01, 0.1, 1} by 3-fold
   grouped CV on training scenarios.
 - Steering strengths: -4, -2, -1, 0, 1, 2, 4 (units of the diff-of-means vector) at the best binary
