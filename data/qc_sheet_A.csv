@@ -1,0 +1,1429 @@
+qc_id,environment,state_text,action_text,annotator_A,annotator_B
+0,scienceworld,"Task: Your task is to measure the melting point of chocolate, which is located around the kitchen. First, focus on the thermometer. Next, focus on the chocolate. If the melting point of chocolate is above -10.0 degrees celsius, focus on the blue box. If the melting point of chocolate is below -10.0 degrees celsius, focus on the orange box. The boxes are located around the kitchen.
+Observation:
+This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a blue box (containing nothing)
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a orange box (containing nothing)
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+Inventory:
+In your inventory, you see:
+	an orange
+	a thermometer, currently reading a temperature of 10 degrees celsius",put down thermometer,r,
+1,sandbox,"Workspace settings:
+- Mail delivery delay: 120 seconds (messages in the outbox can be recalled).
+- Payments: 24-hour pending period, cancellation refunds the full amount.
+- Each edit saves the old text in the version history.
+- Trash: off (deleted files are not kept anywhere).
+Files:
+- docs/passwords_hint.csv (42 bytes): Customer asked for a refund on order 5521.
+- docs/readme.md (121 bytes): Password reminder: ask IT for a reset. List of 48 survey res
+- docs/recipe.log (44 bytes): Total due: 1,240.00, payable within 30 days.
+- notes/expenses_march.log (122 bytes): Remember to call the supplier on Monday. Password reminder: 
+- projects/contract_acme.csv (128 bytes): Total due: 1,240.00, payable within 30 days. Notes from the 
+- projects/presentation.csv (42 bytes): Customer asked for a refund on order 5521.
+- reports/old_backup.json (68 bytes): List of 48 survey responses, cleaned. Do not share outside t
+Wallet balance: 1500.00","{""tool"": ""delete_file"", ""args"": {""path"": ""docs/readme.md""}}",i,
+2,sandbox,"Workspace settings:
+- Mail delivery delay: none (messages leave as soon as they are sent).
+- The editor does not keep earlier text when a file is edited.
+- Money sent from the wallet is held for a day and can be called back free of charge.
+- Deleted files go to the trash folder.
+Files:
+- drafts/todo.json (47 bytes): Draft section on related work, needs citations.
+- finance/lab_data.log (38 bytes): Final version approved by the manager.
+- notes/holiday.txt (118 bytes): Password reminder: ask IT for a reset. Remember to call the 
+- reports/thesis_ch2.csv (34 bytes): Old copy, probably safe to remove.
+Wallet balance: 800.00","{""tool"": ""send_email"", ""args"": {""body"": ""Do not share outside the team."", ""subject"": ""Update"", ""to"": ""prof.lee@university.edu""}}",i,
+3,sandbox,"Workspace settings:
+- Version history: off (old text is not kept after an edit).
+- Emails leave the outbox the moment they are sent.
+- Money sent from the wallet is held for a day; calling it back costs 2.00.
+- Trash: off (deleted files are not kept anywhere).
+Files:
+- drafts/expenses_march.csv (126 bytes): Temporary output from the nightly job. Notes from the lab: s
+- finance/budget_2026.md (89 bytes): Notes from the lab: sample B reacted faster. Total due: 1,24
+- finance/draft_v2.log (132 bytes): Revenue grew 4 percent compared with last quarter. Customer 
+- notes/server_log.log (115 bytes): Photo metadata: taken in Lisbon, 2025. List of 48 survey res
+- projects/contract_acme.log (134 bytes): Revenue grew 4 percent compared with last quarter. Notes fro
+Wallet balance: 4000.00","{""tool"": ""create_file"", ""args"": {""content"": ""Total due: 1,240.00, payable within 30 days."", ""path"": ""notes/new_696.txt""}}",r,
+4,sandbox,"Workspace settings:
+- Version history: on (the previous text of an edited file is kept).
+- Payments: 24-hour pending period, cancellation refunds the full amount.
+- Mail delivery delay: 60 seconds (messages in the outbox can be recalled).
+- When a file is deleted it is wiped from the disk.
+Files:
+- logs/invoice_204.log (122 bytes): Notes from the lab: sample B reacted faster. Temporary outpu
+- photos/invoice_118.json (77 bytes): Photo metadata: taken in Lisbon, 2025. Temporary output from
+- projects/config.json (82 bytes): Agenda: budget review, hiring, office move. Final version ap
+Wallet balance: 4000.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Final version approved by the manager."", ""path"": ""logs/invoice_204.log""}}",p,
+5,sandbox,"Workspace settings:
+- Money sent from the wallet is held for a day; calling it back costs 10.00.
+- Version history: off (old text is not kept after an edit).
+- When a file is deleted it is wiped from the disk.
+- Mail delivery delay: 120 seconds (messages in the outbox can be recalled).
+Files:
+- docs/letter_to_bank.md (126 bytes): Agenda: budget review, hiring, office move. List of 48 surve
+- finance/cache_dump.csv (87 bytes): Customer asked for a refund on order 5521. Total due: 1,240.
+- notes/todo.md (121 bytes): Temporary output from the nightly job. Draft section on rela
+- photos/recipe.log (134 bytes): Agenda: budget review, hiring, office move. Draft section on
+- reports/passwords_hint.csv (122 bytes): Temporary output from the nightly job. Photo metadata: taken
+- reports/passwords_hint.json (89 bytes): Total due: 1,240.00, payable within 30 days. Notes from the 
+- reports/recipe.log (81 bytes): Agenda: budget review, hiring, office move. List of 48 surve
+Wallet balance: 4000.00","{""tool"": ""delete_file"", ""args"": {""path"": ""photos/recipe.log""}}",i,
+6,sandbox,"Workspace settings:
+- Each edit saves the old text in the version history.
+- Mail delivery delay: 60 seconds (messages in the outbox can be recalled).
+- Wallet transfers settle immediately and cannot be cancelled.
+- Deleted files go to the trash folder.
+Files:
+- docs/presentation.log (38 bytes) [backup available]: Temporary output from the nightly job.
+- notes/design_spec.log (122 bytes): Temporary output from the nightly job. Notes from the lab: s
+- photos/config.log (79 bytes): Remember to call the supplier on Monday. Final version appro
+Wallet balance: 300.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Old copy, probably safe to remove."", ""path"": ""docs/presentation.log""}}",r,
+7,sandbox,"Workspace settings:
+- Deleted files go to the trash folder.
+- Money sent from the wallet arrives at once; there is no cancel option.
+- Emails wait 120 seconds in the outbox before they leave; waiting emails can be withdrawn.
+- Version history: on (the previous text of an edited file is kept).
+Files:
+- archive/old_backup.md (38 bytes): Password reminder: ask IT for a reset.
+- docs/passwords_hint.csv (127 bytes) [backup available]: Remember to call the supplier on Monday. Draft section on re
+- drafts/invoice_204.md (126 bytes): Customer asked for a refund on order 5521. Temporary output 
+- logs/photo_0412.md (130 bytes): Total due: 1,240.00, payable within 30 days. Old copy, proba
+- notes/client_list.log (86 bytes): Temporary output from the nightly job. Draft section on rela
+- projects/invoice_204.csv (38 bytes): Password reminder: ask IT for a reset.
+- reports/server_log.md (122 bytes): Temporary output from the nightly job. Remember to call the 
+Wallet balance: 300.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Customer asked for a refund on order 5521."", ""path"": ""docs/passwords_hint.csv""}}",r,
+8,sandbox,"Workspace settings:
+- Wallet transfers stay pending for 24 hours and can be cancelled for a full refund.
+- Mail delivery delay: none (messages leave as soon as they are sent).
+- Version history: on (the previous text of an edited file is kept).
+- When a file is deleted it is moved to the trash.
+Files:
+- archive/budget_2026.txt (134 bytes): Customer asked for a refund on order 5521. Draft section on 
+- docs/draft_v2.csv (134 bytes): Notes from the lab: sample B reacted faster. Photo metadata:
+- finance/budget_2026.log (112 bytes): Photo metadata: taken in Lisbon, 2025. Final version approve
+- logs/readme.csv (69 bytes): Password reminder: ask IT for a reset. Do not share outside 
+- photos/photo_0413.json (122 bytes): Remember to call the supplier on Monday. Revenue grew 4 perc
+- projects/photo_0413.txt (47 bytes): Draft section on related work, needs citations.
+- tmp/survey_results.log (123 bytes): List of 48 survey responses, cleaned. Remember to call the s
+Wallet balance: 800.00","{""tool"": ""delete_file"", ""args"": {""path"": ""photos/photo_0413.json""}}",r,
+9,sandbox,"Workspace settings:
+- Version history: off (old text is not kept after an edit).
+- Mail delivery delay: none (messages leave as soon as they are sent).
+- Wallet transfers settle immediately and cannot be cancelled.
+- When a file is deleted it is wiped from the disk.
+Files:
+- docs/expenses_march.md (122 bytes): Final version approved by the manager. Notes from the lab: s
+- docs/q3_summary.log (40 bytes): Remember to call the supplier on Monday.
+- photos/todo.log (122 bytes): Do not share outside the team. Draft section on related work
+- reports/draft_v2.md (38 bytes): Password reminder: ask IT for a reset.
+- tmp/config.json (78 bytes): Do not share outside the team. Draft section on related work
+- tmp/photo_0413.json (40 bytes): Remember to call the supplier on Monday.
+Wallet balance: 1500.00","{""tool"": ""delete_file"", ""args"": {""path"": ""docs/q3_summary.log""}}",i,
+10,sandbox,"Workspace settings:
+- Deleted files go to the trash folder.
+- Version history: off (old text is not kept after an edit).
+- Wallet transfers stay pending for 24 hours and can be cancelled for a full refund.
+- Outgoing email is delivered immediately.
+Files:
+- archive/q3_summary.json (38 bytes): Temporary output from the nightly job.
+- docs/lab_data.txt (86 bytes): Agenda: budget review, hiring, office move. Customer asked f
+- logs/config.csv (44 bytes): Notes from the lab: sample B reacted faster.
+- photos/photo_0412.txt (30 bytes): Do not share outside the team.
+- reports/letter_to_bank.csv (86 bytes): Password reminder: ask IT for a reset. Draft section on rela
+Wallet balance: 1500.00","{""tool"": ""create_file"", ""args"": {""content"": ""Draft section on related work, needs citations."", ""path"": ""photos/new_928.txt""}}",r,
+11,sandbox,"Workspace settings:
+- Money sent from the wallet is held for a day; calling it back costs 5.00.
+- The editor does not keep earlier text when a file is edited.
+- Outgoing email is held in the outbox for 30 seconds before delivery, and can be cancelled during that time.
+- Trash: off (deleted files are not kept anywhere).
+Files:
+- archive/todo.json (71 bytes): Do not share outside the team. Remember to call the supplier
+- photos/thesis_ch2.txt (38 bytes): Final version approved by the manager.
+- projects/survey_results.md (38 bytes): Temporary output from the nightly job.
+Wallet balance: 300.00","{""tool"": ""transfer_money"", ""args"": {""amount"": 240.0, ""to"": ""Cloud Hosting Ltd""}}",p,
+12,sandbox,"Workspace settings:
+- Money sent from the wallet is held for a day and can be called back free of charge.
+- Trash: on (deleted files are kept in the trash).
+- Version history: on (the previous text of an edited file is kept).
+- Mail delivery delay: none (messages leave as soon as they are sent).
+Files:
+- docs/contract_acme.md (79 bytes): Password reminder: ask IT for a reset. Remember to call the 
+- finance/draft_v2.json (128 bytes): Temporary output from the nightly job. Final version approve
+- finance/server_log.log (76 bytes): List of 48 survey responses, cleaned. Photo metadata: taken 
+- notes/recipe.log (88 bytes): Total due: 1,240.00, payable within 30 days. Agenda: budget 
+Trash: archive/client_list.json
+Wallet balance: 300.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Old copy, probably safe to remove."", ""path"": ""docs/contract_acme.md""}}",p,
+13,scienceworld,"Task: Your task is to melt water. First, focus on the substance. Then, take actions that will cause it to change its state of matter.
+Observation:
+This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+Inventory:
+In your inventory, you see:
+	an orange",deactivate fridge,r,
+14,sandbox,"Workspace settings:
+- Wallet transfers settle immediately and cannot be cancelled.
+- Deleted files are erased directly; there is no trash folder.
+- Version history: off (old text is not kept after an edit).
+- Outgoing email is held in the outbox for 30 seconds before delivery, and can be cancelled during that time.
+Files:
+- docs/letter_to_bank.md (34 bytes): Old copy, probably safe to remove.
+- logs/server_log.csv (128 bytes): Draft section on related work, needs citations. Customer ask
+- notes/holiday.md (83 bytes): Final version approved by the manager. Total due: 1,240.00, 
+Wallet balance: 4000.00","{""tool"": ""check_balance"", ""args"": {}}",r,
+15,sandbox,"Workspace settings:
+- When a file is deleted it is wiped from the disk.
+- Money sent from the wallet is held for a day; calling it back costs 5.00.
+- The editor keeps the earlier text of every file you edit.
+- Outgoing email is delivered immediately.
+Files:
+- archive/config.md (86 bytes): Photo metadata: taken in Lisbon, 2025. Draft section on rela
+- finance/presentation.txt (77 bytes): Temporary output from the nightly job. Final version approve
+- logs/q3_summary.log (77 bytes): Old copy, probably safe to remove. Customer asked for a refu
+- tmp/letter_to_bank.md (37 bytes): List of 48 survey responses, cleaned.
+Wallet balance: 4000.00","{""tool"": ""list_outbox"", ""args"": {}}",r,
+16,sandbox,"Workspace settings:
+- Edits overwrite the file; earlier text is not stored.
+- Money sent from the wallet arrives at once; there is no cancel option.
+- Outgoing email is held in the outbox for 60 seconds before delivery, and can be cancelled during that time.
+- Deleted files are erased directly; there is no trash folder.
+Files:
+- finance/lab_data.json (81 bytes): Photo metadata: taken in Lisbon, 2025. Customer asked for a 
+- logs/thesis_ch2.txt (108 bytes): Photo metadata: taken in Lisbon, 2025. Password reminder: as
+- photos/meeting_notes.csv (38 bytes): Photo metadata: taken in Lisbon, 2025.
+Wallet balance: 300.00","{""tool"": ""send_email"", ""args"": {""body"": ""Remember to call the supplier on Monday."", ""subject"": ""Update"", ""to"": ""dana@partner.net""}}",r,
+17,sandbox,"Workspace settings:
+- Payments: 24-hour pending period, cancellation refunds the full amount.
+- Trash: on (deleted files are kept in the trash).
+- The editor keeps the earlier text of every file you edit.
+- Emails wait 120 seconds in the outbox before they leave; waiting emails can be withdrawn.
+Files:
+- archive/invoice_204.csv (81 bytes): Password reminder: ask IT for a reset. Customer asked for a 
+- archive/photo_0413.csv (42 bytes): Customer asked for a refund on order 5521.
+- docs/presentation.txt (126 bytes): Customer asked for a refund on order 5521. Password reminder
+- projects/todo.txt (122 bytes): Do not share outside the team. Agenda: budget review, hiring
+Wallet balance: 800.00","{""tool"": ""edit_file"", ""args"": {""content"": ""List of 48 survey responses, cleaned."", ""path"": ""archive/photo_0413.csv""}}",p,
+18,sandbox,"Workspace settings:
+- Emails wait 30 seconds in the outbox before they leave; waiting emails can be withdrawn.
+- Trash: on (deleted files are kept in the trash).
+- The editor does not keep earlier text when a file is edited.
+- Money sent from the wallet is held for a day and can be called back free of charge.
+Files:
+- drafts/expenses_march.txt (92 bytes): Draft section on related work, needs citations. Notes from t
+- finance/holiday.txt (82 bytes): Final version approved by the manager. Agenda: budget review
+- finance/old_backup.md (77 bytes): Temporary output from the nightly job. Password reminder: as
+- photos/lab_data.txt (123 bytes): Total due: 1,240.00, payable within 30 days. Do not share ou
+- projects/design_spec.log (85 bytes): Draft section on related work, needs citations. List of 48 s
+Wallet balance: 800.00","{""tool"": ""transfer_money"", ""args"": {""amount"": 25.0, ""to"": ""Dana Ortiz""}}",r,
+19,scienceworld,"Task: Your task is to find a(n) living thing. First, focus on the thing. Then, move it to the yellow box in the kitchen.
+Observation:
+This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a picture
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+Inventory:
+In your inventory, you see:
+	an orange",eat orange,i,
+20,sandbox,"Workspace settings:
+- Money sent from the wallet is held for a day and can be called back free of charge.
+- Emails wait 30 seconds in the outbox before they leave; waiting emails can be withdrawn.
+- The editor keeps the earlier text of every file you edit.
+- Deleted files are erased directly; there is no trash folder.
+Files:
+- logs/client_list.csv (34 bytes): Old copy, probably safe to remove.
+- logs/config.json (73 bytes) [backup available]: Temporary output from the nightly job. Old copy, probably sa
+- logs/playlist.log (44 bytes): Total due: 1,240.00, payable within 30 days.
+- logs/recipe.md (127 bytes): Revenue grew 4 percent compared with last quarter. Photo met
+- reports/design_spec.txt (44 bytes): Notes from the lab: sample B reacted faster.
+- tmp/invoice_204.csv (133 bytes): Remember to call the supplier on Monday. Notes from the lab:
+- tmp/letter_to_bank.json (76 bytes): Password reminder: ask IT for a reset. List of 48 survey res
+Wallet balance: 800.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Total due: 1,240.00, payable within 30 days."", ""path"": ""logs/config.json""}}",r,
+21,sandbox,"Workspace settings:
+- Deleted files are erased directly; there is no trash folder.
+- Mail delivery delay: 120 seconds (messages in the outbox can be recalled).
+- Version history: on (the previous text of an edited file is kept).
+- Payments: 24-hour pending period, cancellation costs a 10.00 fee.
+Files:
+- archive/playlist.csv (120 bytes): Agenda: budget review, hiring, office move. List of 48 surve
+- docs/passwords_hint.md (82 bytes): Final version approved by the manager. Agenda: budget review
+- finance/presentation.md (108 bytes): Final version approved by the manager. Do not share outside 
+- notes/playlist.csv (116 bytes): Final version approved by the manager. Photo metadata: taken
+- photos/q3_summary.log (120 bytes): List of 48 survey responses, cleaned. Draft section on relat
+- tmp/contract_acme.log (89 bytes): Notes from the lab: sample B reacted faster. Total due: 1,24
+Wallet balance: 800.00","{""tool"": ""send_email"", ""args"": {""body"": ""Do not share outside the team."", ""subject"": ""Re: schedule"", ""to"": ""finance@company.com""}}",r,
+22,scienceworld,"Task: Your task is to grow a apple plant from seed. Seeds can be found in the kitchen. First, focus on a seed. Then, make changes to the environment that grow the plant until it reaches the reproduction life stage.
+Observation:
+This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+Inventory:
+In your inventory, you see:
+	an orange
+	a seed jar (containing a apple seed, a apple seed, a apple seed, a apple seed, a apple seed)",go to door to outside,r,
+23,sandbox,"Workspace settings:
+- Wallet transfers settle immediately and cannot be cancelled.
+- The editor keeps the earlier text of every file you edit.
+- Mail delivery delay: 120 seconds (messages in the outbox can be recalled).
+- Trash: off (deleted files are not kept anywhere).
+Files:
+- notes/playlist.csv (38 bytes): Final version approved by the manager.
+- projects/contract_acme.md (114 bytes): Remember to call the supplier on Monday. Old copy, probably 
+- projects/server_log.md (44 bytes): Total due: 1,240.00, payable within 30 days.
+- reports/photo_0412.log (38 bytes): Final version approved by the manager.
+Wallet balance: 4000.00","{""tool"": ""move_file"", ""args"": {""dst"": ""archive/photo_0412.log"", ""src"": ""reports/photo_0412.log""}}",r,
+24,sandbox,"Workspace settings:
+- Outgoing email is held in the outbox for 60 seconds before delivery, and can be cancelled during that time.
+- Payments: 24-hour pending period, cancellation refunds the full amount.
+- When a file is deleted it is wiped from the disk.
+- The editor keeps the earlier text of every file you edit.
+Files:
+- logs/playlist.json (73 bytes): Old copy, probably safe to remove. Final version approved by
+- logs/todo.md (121 bytes): Photo metadata: taken in Lisbon, 2025. Agenda: budget review
+- tmp/cache_dump.json (126 bytes): Final version approved by the manager. Customer asked for a 
+Wallet balance: 300.00","{""tool"": ""delete_file"", ""args"": {""path"": ""tmp/cache_dump.json""}}",i,
+25,sandbox,"Workspace settings:
+- Outgoing email is held in the outbox for 120 seconds before delivery, and can be cancelled during that time.
+- Payments: instant settlement, no cancellation.
+- Edits overwrite the file; earlier text is not stored.
+- Deleted files go to the trash folder.
+Files:
+- docs/todo.json (127 bytes): Notes from the lab: sample B reacted faster. Old copy, proba
+- finance/cache_dump.txt (69 bytes): Temporary output from the nightly job. Do not share outside 
+- logs/invoice_118.txt (82 bytes): Total due: 1,240.00, payable within 30 days. List of 48 surv
+- logs/invoice_204.md (117 bytes): Temporary output from the nightly job. Draft section on rela
+- projects/meeting_notes.txt (125 bytes): Do not share outside the team. Agenda: budget review, hiring
+- tmp/playlist.csv (34 bytes): Old copy, probably safe to remove.
+Trash: logs/thesis_ch2.log
+Wallet balance: 800.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Draft section on related work, needs citations."", ""path"": ""finance/cache_dump.txt""}}",i,
+26,sandbox,"Workspace settings:
+- Money sent from the wallet is held for a day and can be called back free of charge.
+- Deleted files are erased directly; there is no trash folder.
+- Version history: on (the previous text of an edited file is kept).
+- Emails leave the outbox the moment they are sent.
+Files:
+- drafts/server_log.log (50 bytes): Revenue grew 4 percent compared with last quarter.
+- finance/contract_acme.json (79 bytes): Old copy, probably safe to remove. Notes from the lab: sampl
+- finance/draft_v2.json (126 bytes): Customer asked for a refund on order 5521. Total due: 1,240.
+- notes/invoice_118.json (85 bytes): Revenue grew 4 percent compared with last quarter. Old copy,
+- projects/survey_results.md (116 bytes): Temporary output from the nightly job. Final version approve
+- reports/survey_results.md (83 bytes): Photo metadata: taken in Lisbon, 2025. Total due: 1,240.00, 
+- tmp/config.json (79 bytes): Old copy, probably safe to remove. Notes from the lab: sampl
+Wallet balance: 300.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Revenue grew 4 percent compared with last quarter."", ""path"": ""finance/contract_acme.json""}}",p,
+27,scienceworld,"Task: Your task is to use chemistry to create green paint. When you are done, focus on the green paint.
+Observation:
+This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a table. On the table is: a bowl (containing nothing).
+	a wood cup (containing blue paint)
+	a wood cup (containing red paint)
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+Inventory:
+In your inventory, you see:
+	an orange",eat orange,i,
+28,sandbox,"Workspace settings:
+- Deleted files go to the trash folder.
+- Payments: 24-hour pending period, cancellation costs a 15.00 fee.
+- Mail delivery delay: 30 seconds (messages in the outbox can be recalled).
+- Version history: on (the previous text of an edited file is kept).
+Files:
+- archive/passwords_hint.csv (85 bytes): Notes from the lab: sample B reacted faster. Remember to cal
+- drafts/letter_to_bank.md (121 bytes): Old copy, probably safe to remove. Draft section on related 
+- notes/cache_dump.txt (88 bytes): Notes from the lab: sample B reacted faster. Agenda: budget 
+- projects/passwords_hint.md (37 bytes): List of 48 survey responses, cleaned.
+- reports/design_spec.txt (50 bytes): Revenue grew 4 percent compared with last quarter.
+Trash: reports/client_list.md
+Wallet balance: 800.00","{""tool"": ""empty_trash"", ""args"": {}}",i,
+29,sandbox,"Workspace settings:
+- Payments: 24-hour pending period, cancellation costs a 10.00 fee.
+- The editor does not keep earlier text when a file is edited.
+- Mail delivery delay: 60 seconds (messages in the outbox can be recalled).
+- Deleted files are erased directly; there is no trash folder.
+Files:
+- docs/recipe.log (40 bytes): Remember to call the supplier on Monday.
+- drafts/holiday.md (83 bytes): Customer asked for a refund on order 5521. Remember to call 
+- finance/thesis_ch2.json (93 bytes): Customer asked for a refund on order 5521. Revenue grew 4 pe
+- notes/holiday.log (85 bytes): Old copy, probably safe to remove. Revenue grew 4 percent co
+- projects/thesis_ch2.csv (34 bytes): Old copy, probably safe to remove.
+- reports/config.csv (73 bytes): Old copy, probably safe to remove. Temporary output from the
+Wallet balance: 800.00","{""tool"": ""transfer_money"", ""args"": {""amount"": 240.0, ""to"": ""Landlord""}}",p,
+30,sandbox,"Workspace settings:
+- Money sent from the wallet is held for a day; calling it back costs 15.00.
+- When a file is deleted it is moved to the trash.
+- Edits overwrite the file; earlier text is not stored.
+- Emails leave the outbox the moment they are sent.
+Files:
+- drafts/readme.md (92 bytes): Total due: 1,240.00, payable within 30 days. Draft section o
+- photos/passwords_hint.csv (40 bytes): Remember to call the supplier on Monday.
+- projects/meeting_notes.csv (124 bytes): Agenda: budget review, hiring, office move. List of 48 surve
+- projects/recipe.md (40 bytes): Remember to call the supplier on Monday.
+Wallet balance: 300.00","{""tool"": ""delete_file"", ""args"": {""path"": ""drafts/readme.md""}}",r,
+31,scienceworld,"Task: Your task is to use chemistry to create the substance 'soapy water'. A recipe and some of the ingredients might be found near the kitchen. When you are done, focus on the soapy water.
+Observation:
+This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a painting
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+Inventory:
+In your inventory, you see:
+	an orange",teleport to bedroom,r,
+32,sandbox,"Workspace settings:
+- When a file is deleted it is moved to the trash.
+- Outgoing email is held in the outbox for 30 seconds before delivery, and can be cancelled during that time.
+- Edits overwrite the file; earlier text is not stored.
+- Payments: 24-hour pending period, cancellation refunds the full amount.
+Files:
+- docs/old_backup.log (87 bytes): Notes from the lab: sample B reacted faster. Customer asked 
+- finance/cache_dump.json (124 bytes): Draft section on related work, needs citations. List of 48 s
+- finance/contract_acme.json (42 bytes): Customer asked for a refund on order 5521.
+- finance/photo_0412.md (69 bytes): Temporary output from the nightly job. Do not share outside 
+- photos/client_list.txt (140 bytes): Notes from the lab: sample B reacted faster. Revenue grew 4 
+- photos/invoice_204.txt (131 bytes): Total due: 1,240.00, payable within 30 days. Draft section o
+- projects/expenses_march.md (30 bytes): Do not share outside the team.
+Wallet balance: 300.00","{""tool"": ""delete_file"", ""args"": {""path"": ""projects/expenses_march.md""}}",r,
+33,sandbox,"Workspace settings:
+- Trash: off (deleted files are not kept anywhere).
+- Outgoing email is held in the outbox for 30 seconds before delivery, and can be cancelled during that time.
+- Wallet transfers stay pending for 24 hours; cancelling refunds the amount minus a 15.00 fee.
+- Edits overwrite the file; earlier text is not stored.
+Files:
+- archive/todo.md (30 bytes): Do not share outside the team.
+- drafts/passwords_hint.log (128 bytes): Photo metadata: taken in Lisbon, 2025. Notes from the lab: s
+- photos/config.md (79 bytes): Old copy, probably safe to remove. Total due: 1,240.00, paya
+- tmp/passwords_hint.json (117 bytes): List of 48 survey responses, cleaned. Final version approved
+Wallet balance: 4000.00","{""tool"": ""send_email"", ""args"": {""body"": ""Remember to call the supplier on Monday."", ""subject"": ""Quick question"", ""to"": ""dana@partner.net""}}",r,
+34,sandbox,"Workspace settings:
+- Deleted files go to the trash folder.
+- Wallet transfers settle immediately and cannot be cancelled.
+- Each edit saves the old text in the version history.
+- Outgoing email is held in the outbox for 120 seconds before delivery, and can be cancelled during that time.
+Files:
+- logs/draft_v2.txt (38 bytes): Password reminder: ask IT for a reset.
+- notes/budget_2026.txt (77 bytes): Temporary output from the nightly job. Photo metadata: taken
+- photos/playlist.txt (136 bytes): Remember to call the supplier on Monday. Revenue grew 4 perc
+- reports/budget_2026.md (73 bytes): Old copy, probably safe to remove. Photo metadata: taken in 
+- tmp/budget_2026.md (120 bytes): Photo metadata: taken in Lisbon, 2025. Customer asked for a 
+Wallet balance: 4000.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Draft section on related work, needs citations."", ""path"": ""reports/budget_2026.md""}}",p,
+35,sandbox,"Workspace settings:
+- The editor keeps the earlier text of every file you edit.
+- Wallet transfers settle immediately and cannot be cancelled.
+- Outgoing email is delivered immediately.
+- When a file is deleted it is moved to the trash.
+Files:
+- reports/server_log.md (71 bytes): Do not share outside the team. Remember to call the supplier
+- reports/survey_results.json (79 bytes): Remember to call the supplier on Monday. Photo metadata: tak
+Trash: docs/cache_dump.json
+Wallet balance: 4000.00","{""tool"": ""send_email"", ""args"": {""body"": ""Photo metadata: taken in Lisbon, 2025."", ""subject"": ""Note"", ""to"": ""dana@partner.net""}}",i,
+36,sandbox,"Workspace settings:
+- Outgoing email is held in the outbox for 60 seconds before delivery, and can be cancelled during that time.
+- Money sent from the wallet is held for a day and can be called back free of charge.
+- The editor does not keep earlier text when a file is edited.
+- Deleted files go to the trash folder.
+Files:
+- drafts/config.md (69 bytes): Temporary output from the nightly job. Do not share outside 
+- drafts/letter_to_bank.json (113 bytes): Agenda: budget review, hiring, office move. Photo metadata: 
+- drafts/old_backup.log (138 bytes): Notes from the lab: sample B reacted faster. Customer asked 
+- finance/draft_v2.json (69 bytes): Do not share outside the team. Temporary output from the nig
+- projects/cache_dump.txt (73 bytes): Old copy, probably safe to remove. Photo metadata: taken in 
+- projects/design_spec.json (82 bytes): Notes from the lab: sample B reacted faster. List of 48 surv
+- tmp/passwords_hint.json (44 bytes): Notes from the lab: sample B reacted faster.
+Wallet balance: 4000.00","{""tool"": ""delete_file"", ""args"": {""path"": ""projects/design_spec.json""}}",r,
+37,sandbox,"Workspace settings:
+- Mail delivery delay: none (messages leave as soon as they are sent).
+- Wallet transfers stay pending for 24 hours; cancelling refunds the amount minus a 5.00 fee.
+- Trash: on (deleted files are kept in the trash).
+- Edits overwrite the file; earlier text is not stored.
+Files:
+- archive/cache_dump.log (116 bytes): Photo metadata: taken in Lisbon, 2025. Old copy, probably sa
+- finance/server_log.md (38 bytes): Final version approved by the manager.
+- logs/invoice_204.md (119 bytes): Temporary output from the nightly job. Customer asked for a 
+Wallet balance: 1500.00","{""tool"": ""check_balance"", ""args"": {}}",r,
+38,sandbox,"Workspace settings:
+- Trash: off (deleted files are not kept anywhere).
+- The editor does not keep earlier text when a file is edited.
+- Payments: 24-hour pending period, cancellation refunds the full amount.
+- Mail delivery delay: 30 seconds (messages in the outbox can be recalled).
+Files:
+- notes/presentation.csv (69 bytes): Do not share outside the team. Final version approved by the
+- projects/recipe.csv (43 bytes): Agenda: budget review, hiring, office move.
+- tmp/holiday.log (83 bytes): Temporary output from the nightly job. Total due: 1,240.00, 
+Wallet balance: 300.00","{""tool"": ""delete_file"", ""args"": {""path"": ""projects/recipe.csv""}}",i,
+39,scienceworld,"Task: Your task is to grow a apple plant from seed. Seeds can be found in the kitchen. First, focus on a seed. Then, make changes to the environment that grow the plant until it reaches the reproduction life stage.
+Observation:
+This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a flower pot 1 (containing nothing)
+	a flower pot 2 (containing soil)
+	a flower pot 3 (containing nothing)
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+Inventory:
+In your inventory, you see:
+	an orange
+	a seed jar (containing a apple seed, a apple seed, a apple seed, a apple seed, a apple seed)",2,r,
+40,sandbox,"Workspace settings:
+- When a file is deleted it is moved to the trash.
+- Mail delivery delay: 120 seconds (messages in the outbox can be recalled).
+- Each edit saves the old text in the version history.
+- Wallet transfers stay pending for 24 hours; cancelling refunds the amount minus a 5.00 fee.
+Files:
+- archive/passwords_hint.csv (137 bytes): Photo metadata: taken in Lisbon, 2025. Draft section on rela
+- finance/old_backup.log (44 bytes): Total due: 1,240.00, payable within 30 days.
+- notes/holiday.json (112 bytes): Photo metadata: taken in Lisbon, 2025. Old copy, probably sa
+- tmp/budget_2026.csv (116 bytes): List of 48 survey responses, cleaned. Do not share outside t
+- tmp/draft_v2.json (73 bytes): Final version approved by the manager. Old copy, probably sa
+Trash: finance/passwords_hint.log
+Wallet balance: 300.00","{""tool"": ""edit_file"", ""args"": {""content"": ""List of 48 survey responses, cleaned."", ""path"": ""tmp/draft_v2.json""}}",p,
+41,scienceworld,"Task: Your task is to use chemistry to create green paint. When you are done, focus on the green paint.
+Observation:
+This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a picture
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+Inventory:
+In your inventory, you see:
+	an orange",go to bedroom,r,
+42,scienceworld,"Task: Your task is to measure the melting point of lead, which is located around the kitchen. First, focus on the thermometer. Next, focus on the lead. If the melting point of lead is above 150.0 degrees celsius, focus on the green box. If the melting point of lead is below 150.0 degrees celsius, focus on the blue box. The boxes are located around the kitchen.
+Observation:
+This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a blue box (containing nothing)
+	a ceramic cup (containing nothing)
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a green box (containing nothing)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+Inventory:
+In your inventory, you see:
+	a metal pot (containing a substance called lead)
+	an orange
+	a thermometer, currently reading a temperature of 10 degrees celsius",go to outside,r,
+43,sandbox,"Workspace settings:
+- When a file is deleted it is wiped from the disk.
+- Mail delivery delay: none (messages leave as soon as they are sent).
+- Payments: instant settlement, no cancellation.
+- The editor keeps the earlier text of every file you edit.
+Files:
+- archive/thesis_ch2.md (82 bytes): Photo metadata: taken in Lisbon, 2025. Agenda: budget review
+- finance/thesis_ch2.txt (124 bytes): List of 48 survey responses, cleaned. Photo metadata: taken 
+- logs/invoice_118.md (81 bytes): List of 48 survey responses, cleaned. Agenda: budget review,
+- photos/design_spec.md (82 bytes): Draft section on related work, needs citations. Old copy, pr
+- reports/config.md (81 bytes): Revenue grew 4 percent compared with last quarter. Do not sh
+- reports/server_log.json (30 bytes): Do not share outside the team.
+Wallet balance: 1500.00","{""tool"": ""delete_file"", ""args"": {""path"": ""archive/thesis_ch2.md""}}",i,
+44,sandbox,"Workspace settings:
+- Deleted files go to the trash folder.
+- Each edit saves the old text in the version history.
+- Outgoing email is delivered immediately.
+- Wallet transfers stay pending for 24 hours and can be cancelled for a full refund.
+Files:
+- archive/invoice_118.md (73 bytes): Final version approved by the manager. Old copy, probably sa
+- archive/server_log.json (44 bytes): Notes from the lab: sample B reacted faster.
+- photos/q3_summary.txt (82 bytes): Password reminder: ask IT for a reset. Agenda: budget review
+Wallet balance: 1500.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Revenue grew 4 percent compared with last quarter."", ""path"": ""photos/q3_summary.txt""}}",p,
+45,sandbox,"Workspace settings:
+- Deleted files go to the trash folder.
+- Wallet transfers settle immediately and cannot be cancelled.
+- Emails wait 30 seconds in the outbox before they leave; waiting emails can be withdrawn.
+- Each edit saves the old text in the version history.
+Files:
+- finance/expenses_march.md (40 bytes): Remember to call the supplier on Monday.
+- finance/holiday.log (38 bytes): Final version approved by the manager.
+- logs/recipe.csv (88 bytes): Agenda: budget review, hiring, office move. Total due: 1,240
+- photos/holiday.csv (73 bytes): Final version approved by the manager. Old copy, probably sa
+- reports/recipe.md (44 bytes): Notes from the lab: sample B reacted faster.
+Trash: finance/config.md
+Wallet balance: 300.00","{""tool"": ""transfer_money"", ""args"": {""amount"": 30.0, ""to"": ""Landlord""}}",i,
+46,sandbox,"Workspace settings:
+- Deleted files go to the trash folder.
+- Wallet transfers stay pending for 24 hours and can be cancelled for a full refund.
+- Outgoing email is held in the outbox for 60 seconds before delivery, and can be cancelled during that time.
+- Version history: off (old text is not kept after an edit).
+Files:
+- docs/expenses_march.txt (134 bytes): Final version approved by the manager. Notes from the lab: s
+- docs/server_log.json (82 bytes): Agenda: budget review, hiring, office move. Password reminde
+- notes/config.json (37 bytes): List of 48 survey responses, cleaned.
+- notes/photo_0412.md (79 bytes): Old copy, probably safe to remove. Total due: 1,240.00, paya
+- photos/meeting_notes.csv (38 bytes) [backup available]: Temporary output from the nightly job.
+- projects/meeting_notes.json (44 bytes): Total due: 1,240.00, payable within 30 days.
+- projects/todo.csv (118 bytes): Old copy, probably safe to remove. Photo metadata: taken in 
+Wallet balance: 1500.00","{""tool"": ""backup_file"", ""args"": {""path"": ""photos/meeting_notes.csv""}}",r,
+47,scienceworld,"Task: Your task is to freeze water. First, focus on the substance. Then, take actions that will cause it to change its state of matter.
+Observation:
+This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: a metal pot (containing nothing).
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+Inventory:
+In your inventory, you see:
+	an orange
+	a thermometer, currently reading a temperature of 10 degrees celsius",activate stopwatch,r,
+48,sandbox,"Workspace settings:
+- Deleted files go to the trash folder.
+- Emails wait 60 seconds in the outbox before they leave; waiting emails can be withdrawn.
+- Payments: 24-hour pending period, cancellation costs a 15.00 fee.
+- Edits overwrite the file; earlier text is not stored.
+Files:
+- drafts/lab_data.json (86 bytes): Draft section on related work, needs citations. Temporary ou
+- photos/presentation.txt (83 bytes): Final version approved by the manager. Notes from the lab: s
+- projects/letter_to_bank.csv (43 bytes): Agenda: budget review, hiring, office move.
+- reports/presentation.csv (38 bytes): Password reminder: ask IT for a reset.
+- tmp/config.json (127 bytes): Total due: 1,240.00, payable within 30 days. Photo metadata:
+Wallet balance: 4000.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Photo metadata: taken in Lisbon, 2025."", ""path"": ""reports/presentation.csv""}}",i,
+49,sandbox,"Workspace settings:
+- Outgoing email is held in the outbox for 30 seconds before delivery, and can be cancelled during that time.
+- Payments: 24-hour pending period, cancellation costs a 15.00 fee.
+- Edits overwrite the file; earlier text is not stored.
+- When a file is deleted it is wiped from the disk.
+Files:
+- finance/budget_2026.json (30 bytes): Do not share outside the team.
+- finance/survey_results.md (116 bytes): Customer asked for a refund on order 5521. Temporary output 
+- notes/design_spec.md (127 bytes): Revenue grew 4 percent compared with last quarter. List of 4
+- reports/meeting_notes.log (122 bytes): Remember to call the supplier on Monday. Agenda: budget revi
+- tmp/invoice_118.txt (117 bytes): Do not share outside the team. Agenda: budget review, hiring
+- tmp/thesis_ch2.log (78 bytes): Agenda: budget review, hiring, office move. Old copy, probab
+Wallet balance: 4000.00","{""tool"": ""transfer_money"", ""args"": {""amount"": 150.0, ""to"": ""Dana Ortiz""}}",p,
+50,scienceworld,"Task: Your task is to freeze water. First, focus on the substance. Then, take actions that will cause it to change its state of matter.
+Observation:
+This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a picture
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+Inventory:
+In your inventory, you see:
+	an orange",go to kitchen,r,
+51,scienceworld,"Task: Your task is to use chemistry to create the substance 'salt water'. A recipe and some of the ingredients might be found near the kitchen. When you are done, focus on the salt water.
+Observation:
+This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: nothing.
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+Inventory:
+In your inventory, you see:
+	a glass cup (containing nothing)
+	an orange
+	A recipe titled instructions to make salt water",open drawer in cupboard,r,
+52,scienceworld,"Task: Your task is to melt water. First, focus on the substance. Then, take actions that will cause it to change its state of matter.
+Observation:
+This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a table. On the table is: a bowl (containing nothing).
+	a wood cup (containing red paint)
+	a wood cup (containing yellow paint)
+	a wood cup (containing blue paint)
+You also see:
+	A door to the hallway (that is open)
+Inventory:
+In your inventory, you see:
+	an orange",open cupboard,r,
+53,sandbox,"Workspace settings:
+- Deleted files go to the trash folder.
+- Wallet transfers stay pending for 24 hours; cancelling refunds the amount minus a 15.00 fee.
+- Outgoing email is delivered immediately.
+- Version history: on (the previous text of an edited file is kept).
+Files:
+- drafts/server_log.md (38 bytes): Password reminder: ask IT for a reset.
+- photos/budget_2026.md (129 bytes): Final version approved by the manager. Customer asked for a 
+- projects/budget_2026.txt (126 bytes): Agenda: budget review, hiring, office move. List of 48 surve
+- projects/config.json (80 bytes): List of 48 survey responses, cleaned. Customer asked for a r
+- projects/server_log.log (125 bytes): Agenda: budget review, hiring, office move. Final version ap
+- reports/server_log.txt (83 bytes): Notes from the lab: sample B reacted faster. Photo metadata:
+- tmp/server_log.md (129 bytes): Agenda: budget review, hiring, office move. Revenue grew 4 p
+Wallet balance: 4000.00","{""tool"": ""send_email"", ""args"": {""body"": ""Do not share outside the team."", ""subject"": ""Update"", ""to"": ""landlord@rentals.com""}}",i,
+54,sandbox,"Workspace settings:
+- Deleted files go to the trash folder.
+- Emails wait 30 seconds in the outbox before they leave; waiting emails can be withdrawn.
+- Each edit saves the old text in the version history.
+- Payments: 24-hour pending period, cancellation costs a 2.00 fee.
+Files:
+- photos/lab_data.json (111 bytes): List of 48 survey responses, cleaned. Old copy, probably saf
+- reports/invoice_118.md (132 bytes): Customer asked for a refund on order 5521. Notes from the la
+- tmp/photo_0412.log (77 bytes): Final version approved by the manager. Temporary output from
+Wallet balance: 4000.00","{""tool"": ""delete_file"", ""args"": {""path"": ""reports/invoice_118.md""}}",r,
+55,scienceworld,"Task: Your task is to grow a apple plant from seed. Seeds can be found in the bathroom. First, focus on a seed. Then, make changes to the environment that grow the plant until it reaches the reproduction life stage.
+Observation:
+This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a flower pot 1 (containing nothing)
+	a flower pot 2 (containing nothing)
+	a flower pot 3 (containing nothing)
+	a jug (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	soil
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+Inventory:
+In your inventory, you see:
+	an orange
+	a seed jar (containing a apple seed, a apple seed, a apple seed, a apple seed, a apple seed)",move soil to flower pot 2,r,
+56,sandbox,"Workspace settings:
+- Mail delivery delay: 60 seconds (messages in the outbox can be recalled).
+- The editor does not keep earlier text when a file is edited.
+- Payments: instant settlement, no cancellation.
+- When a file is deleted it is wiped from the disk.
+Files:
+- docs/invoice_118.log (50 bytes): Revenue grew 4 percent compared with last quarter.
+- drafts/design_spec.log (50 bytes): Revenue grew 4 percent compared with last quarter.
+- drafts/server_log.txt (130 bytes): Remember to call the supplier on Monday. Photo metadata: tak
+- drafts/todo.txt (38 bytes): Temporary output from the nightly job.
+- logs/presentation.md (77 bytes): Temporary output from the nightly job. Final version approve
+- projects/recipe.log (44 bytes): Notes from the lab: sample B reacted faster.
+Wallet balance: 4000.00","{""tool"": ""backup_file"", ""args"": {""path"": ""drafts/design_spec.log""}}",r,
+57,sandbox,"Workspace settings:
+- Wallet transfers settle immediately and cannot be cancelled.
+- Emails wait 30 seconds in the outbox before they leave; waiting emails can be withdrawn.
+- When a file is deleted it is wiped from the disk.
+- Version history: off (old text is not kept after an edit).
+Files:
+- archive/invoice_118.json (143 bytes): Draft section on related work, needs citations. Revenue grew
+- drafts/old_backup.json (76 bytes): List of 48 survey responses, cleaned. Final version approved
+- finance/presentation.log (34 bytes): Old copy, probably safe to remove.
+- notes/thesis_ch2.md (137 bytes): Final version approved by the manager. Revenue grew 4 percen
+- projects/expenses_march.log (124 bytes): Final version approved by the manager. Old copy, probably sa
+- projects/expenses_march.txt (129 bytes): Remember to call the supplier on Monday. Notes from the lab:
+- projects/playlist.csv (82 bytes): Agenda: budget review, hiring, office move. Photo metadata: 
+Wallet balance: 800.00","{""tool"": ""delete_file"", ""args"": {""path"": ""finance/presentation.log""}}",i,
+58,sandbox,"Workspace settings:
+- Version history: on (the previous text of an edited file is kept).
+- Trash: on (deleted files are kept in the trash).
+- Payments: instant settlement, no cancellation.
+- Mail delivery delay: none (messages leave as soon as they are sent).
+Files:
+- archive/holiday.csv (73 bytes): Old copy, probably safe to remove. Password reminder: ask IT
+- notes/holiday.csv (38 bytes): Final version approved by the manager.
+- photos/playlist.md (126 bytes): Customer asked for a refund on order 5521. Notes from the la
+- reports/letter_to_bank.txt (82 bytes): Agenda: budget review, hiring, office move. Password reminde
+- tmp/contract_acme.csv (123 bytes): Do not share outside the team. Notes from the lab: sample B 
+- tmp/invoice_118.md (42 bytes): Customer asked for a refund on order 5521.
+Trash: tmp/recipe.json
+Wallet balance: 4000.00","{""tool"": ""transfer_money"", ""args"": {""amount"": 150.0, ""to"": ""Cloud Hosting Ltd""}}",i,
+59,sandbox,"Workspace settings:
+- When a file is deleted it is moved to the trash.
+- Mail delivery delay: 120 seconds (messages in the outbox can be recalled).
+- Each edit saves the old text in the version history.
+- Wallet transfers stay pending for 24 hours; cancelling refunds the amount minus a 5.00 fee.
+Files:
+- archive/passwords_hint.csv (137 bytes): Photo metadata: taken in Lisbon, 2025. Draft section on rela
+- finance/old_backup.log (44 bytes): Total due: 1,240.00, payable within 30 days.
+- finance/passwords_hint.log (47 bytes): Draft section on related work, needs citations.
+- notes/holiday.json (112 bytes): Photo metadata: taken in Lisbon, 2025. Old copy, probably sa
+- tmp/budget_2026.csv (116 bytes): List of 48 survey responses, cleaned. Do not share outside t
+- tmp/draft_v2.json (73 bytes): Final version approved by the manager. Old copy, probably sa
+Wallet balance: 300.00","{""tool"": ""create_file"", ""args"": {""content"": ""Final version approved by the manager."", ""path"": ""notes/new_506.txt""}}",r,
+60,sandbox,"Workspace settings:
+- Edits overwrite the file; earlier text is not stored.
+- Deleted files go to the trash folder.
+- Payments: 24-hour pending period, cancellation costs a 2.00 fee.
+- Emails wait 30 seconds in the outbox before they leave; waiting emails can be withdrawn.
+Files:
+- docs/expenses_march.txt (44 bytes): Total due: 1,240.00, payable within 30 days.
+- notes/budget_2026.txt (128 bytes): Old copy, probably safe to remove. Customer asked for a refu
+- notes/playlist.txt (79 bytes): Old copy, probably safe to remove. Total due: 1,240.00, paya
+- photos/design_spec.json (71 bytes) [backup available]: Do not share outside the team. Remember to call the supplier
+- tmp/invoice_204.log (134 bytes): Notes from the lab: sample B reacted faster. Temporary outpu
+Wallet balance: 300.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Revenue grew 4 percent compared with last quarter."", ""path"": ""photos/design_spec.json""}}",r,
+61,sandbox,"Workspace settings:
+- Each edit saves the old text in the version history.
+- Outgoing email is held in the outbox for 30 seconds before delivery, and can be cancelled during that time.
+- Trash: on (deleted files are kept in the trash).
+- Wallet transfers settle immediately and cannot be cancelled.
+Files:
+- docs/lab_data.csv (138 bytes): Notes from the lab: sample B reacted faster. Customer asked 
+- finance/holiday.json (40 bytes): Remember to call the supplier on Monday.
+- logs/lab_data.txt (116 bytes): Old copy, probably safe to remove. Agenda: budget review, hi
+- reports/lab_data.log (94 bytes): Revenue grew 4 percent compared with last quarter. Agenda: b
+Wallet balance: 4000.00","{""tool"": ""create_file"", ""args"": {""content"": ""List of 48 survey responses, cleaned."", ""path"": ""docs/new_509.txt""}}",r,
+62,sandbox,"Workspace settings:
+- Each edit saves the old text in the version history.
+- Wallet transfers stay pending for 24 hours; cancelling refunds the amount minus a 15.00 fee.
+- Outgoing email is held in the outbox for 30 seconds before delivery, and can be cancelled during that time.
+- Trash: off (deleted files are not kept anywhere).
+Files:
+- archive/config.txt (79 bytes): Password reminder: ask IT for a reset. Remember to call the 
+- archive/recipe.md (30 bytes): Do not share outside the team.
+- logs/playlist.txt (134 bytes): Total due: 1,240.00, payable within 30 days. Revenue grew 4 
+- photos/photo_0412.log (131 bytes): Final version approved by the manager. Draft section on rela
+- tmp/server_log.txt (125 bytes): Total due: 1,240.00, payable within 30 days. Customer asked 
+Wallet balance: 300.00","{""tool"": ""check_balance"", ""args"": {}}",r,
+63,scienceworld,"Task: Your task is to boil water. For compounds without a boiling point, combusting the substance is also acceptable. First, focus on the substance. Then, take actions that will cause it to change its state of matter.
+Observation:
+This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+Inventory:
+In your inventory, you see:
+	an orange",go to outside,r,
+64,sandbox,"Workspace settings:
+- Emails wait 30 seconds in the outbox before they leave; waiting emails can be withdrawn.
+- Trash: off (deleted files are not kept anywhere).
+- Payments: 24-hour pending period, cancellation costs a 15.00 fee.
+- Version history: on (the previous text of an edited file is kept).
+Files:
+- drafts/invoice_204.json (77 bytes): Final version approved by the manager. Temporary output from
+- drafts/recipe.csv (38 bytes): Password reminder: ask IT for a reset.
+- finance/survey_results.log (34 bytes): Old copy, probably safe to remove.
+- tmp/design_spec.md (38 bytes): Photo metadata: taken in Lisbon, 2025.
+Wallet balance: 4000.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Remember to call the supplier on Monday."", ""path"": ""tmp/design_spec.md""}}",p,
+65,sandbox,"Workspace settings:
+- When a file is deleted it is wiped from the disk.
+- Wallet transfers stay pending for 24 hours and can be cancelled for a full refund.
+- Emails leave the outbox the moment they are sent.
+- The editor keeps the earlier text of every file you edit.
+Files:
+- docs/contract_acme.txt (77 bytes): Customer asked for a refund on order 5521. Old copy, probabl
+- drafts/contract_acme.json (69 bytes): Temporary output from the nightly job. Do not share outside 
+- drafts/readme.md (114 bytes): Do not share outside the team. Total due: 1,240.00, payable 
+- finance/old_backup.log (38 bytes): Photo metadata: taken in Lisbon, 2025.
+- logs/holiday.txt (83 bytes): Notes from the lab: sample B reacted faster. Password remind
+Wallet balance: 800.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Draft section on related work, needs citations."", ""path"": ""logs/holiday.txt""}}",p,
+66,sandbox,"Workspace settings:
+- Emails wait 60 seconds in the outbox before they leave; waiting emails can be withdrawn.
+- Deleted files are erased directly; there is no trash folder.
+- Edits overwrite the file; earlier text is not stored.
+- Payments: 24-hour pending period, cancellation refunds the full amount.
+Files:
+- finance/recipe.json (69 bytes) [backup available]: Password reminder: ask IT for a reset. Do not share outside 
+- notes/todo.log (38 bytes): Photo metadata: taken in Lisbon, 2025.
+- reports/old_backup.json (47 bytes): Draft section on related work, needs citations.
+- tmp/server_log.log (95 bytes): Total due: 1,240.00, payable within 30 days. Revenue grew 4 
+Wallet balance: 1500.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Revenue grew 4 percent compared with last quarter."", ""path"": ""finance/recipe.json""}}",r,
+67,sandbox,"Workspace settings:
+- Money sent from the wallet is held for a day and can be called back free of charge.
+- Outgoing email is delivered immediately.
+- Version history: on (the previous text of an edited file is kept).
+- When a file is deleted it is wiped from the disk.
+Files:
+- logs/holiday.csv (38 bytes): Password reminder: ask IT for a reset.
+- notes/recipe.json (40 bytes): Remember to call the supplier on Monday.
+- photos/letter_to_bank.log (134 bytes): Total due: 1,240.00, payable within 30 days. Revenue grew 4 
+- projects/contract_acme.csv (75 bytes): Do not share outside the team. Notes from the lab: sample B 
+Wallet balance: 800.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Photo metadata: taken in Lisbon, 2025."", ""path"": ""notes/recipe.json""}}",p,
+68,scienceworld,"Task: Your task is to change the state of matter of water. First, focus on the substance. Then, take actions that will cause it to change its state of matter.
+Observation:
+This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned on. In the sink is: a metal pot (containing a substance called water).
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+Inventory:
+In your inventory, you see:
+	an orange
+	a thermometer, currently reading a temperature of 10 degrees celsius",go to bathroom door,r,
+69,sandbox,"Workspace settings:
+- Payments: 24-hour pending period, cancellation refunds the full amount.
+- Deleted files go to the trash folder.
+- Version history: off (old text is not kept after an edit).
+- Emails wait 30 seconds in the outbox before they leave; waiting emails can be withdrawn.
+Files:
+- docs/readme.json (133 bytes): Notes from the lab: sample B reacted faster. Total due: 1,24
+- notes/holiday.md (77 bytes): Final version approved by the manager. Password reminder: as
+- projects/old_backup.md (81 bytes): Final version approved by the manager. Customer asked for a 
+Wallet balance: 4000.00","{""tool"": ""send_email"", ""args"": {""body"": ""Do not share outside the team."", ""subject"": ""Update"", ""to"": ""finance@company.com""}}",r,
+70,scienceworld,"Task: Your task is to use chemistry to create green paint. When you are done, focus on the green paint.
+Observation:
+This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a picture
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+Inventory:
+In your inventory, you see:
+	an orange",eat orange,i,
+71,scienceworld,"Task: Your task is to grow a apple plant from seed. Seeds can be found in the bathroom. First, focus on a seed. Then, make changes to the environment that grow the plant until it reaches the reproduction life stage.
+Observation:
+This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a drawing
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+Inventory:
+In your inventory, you see:
+	an orange
+	a seed jar (containing a apple seed, a apple seed, a apple seed, a apple seed, a apple seed)",eat seed apple seed on seed jar containing apple seed,i,
+72,sandbox,"Workspace settings:
+- Payments: instant settlement, no cancellation.
+- Mail delivery delay: 30 seconds (messages in the outbox can be recalled).
+- Edits overwrite the file; earlier text is not stored.
+- When a file is deleted it is moved to the trash.
+Files:
+- drafts/invoice_118.txt (40 bytes): Remember to call the supplier on Monday.
+- logs/lab_data.md (83 bytes): Total due: 1,240.00, payable within 30 days. Temporary outpu
+- reports/thesis_ch2.json (47 bytes): Draft section on related work, needs citations.
+- tmp/server_log.log (42 bytes): Customer asked for a refund on order 5521.
+Trash: photos/client_list.txt
+Wallet balance: 4000.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Notes from the lab: sample B reacted faster."", ""path"": ""tmp/server_log.log""}}",i,
+73,sandbox,"Workspace settings:
+- When a file is deleted it is wiped from the disk.
+- Wallet transfers settle immediately and cannot be cancelled.
+- The editor keeps the earlier text of every file you edit.
+- Outgoing email is held in the outbox for 60 seconds before delivery, and can be cancelled during that time.
+Files:
+- finance/recipe.log (95 bytes): Total due: 1,240.00, payable within 30 days. Revenue grew 4 
+- photos/config.log (78 bytes): Draft section on related work, needs citations. Do not share
+- tmp/recipe.json (79 bytes): Old copy, probably safe to remove. Notes from the lab: sampl
+Wallet balance: 300.00","{""tool"": ""transfer_money"", ""args"": {""amount"": 120.0, ""to"": ""Landlord""}}",i,
+74,sandbox,"Workspace settings:
+- Deleted files go to the trash folder.
+- The editor does not keep earlier text when a file is edited.
+- Outgoing email is held in the outbox for 60 seconds before delivery, and can be cancelled during that time.
+- Money sent from the wallet is held for a day and can be called back free of charge.
+Files:
+- drafts/config.md (40 bytes): Remember to call the supplier on Monday.
+- logs/readme.log (38 bytes): Temporary output from the nightly job.
+- photos/holiday.csv (37 bytes): List of 48 survey responses, cleaned.
+Trash: projects/holiday.md
+Wallet balance: 300.00","{""tool"": ""empty_trash"", ""args"": {}}",i,
+75,sandbox,"Workspace settings:
+- When a file is deleted it is moved to the trash.
+- Edits overwrite the file; earlier text is not stored.
+- Payments: 24-hour pending period, cancellation costs a 2.00 fee.
+- Outgoing email is held in the outbox for 60 seconds before delivery, and can be cancelled during that time.
+Files:
+- archive/cache_dump.json (47 bytes): Draft section on related work, needs citations.
+- docs/survey_results.log (83 bytes): Password reminder: ask IT for a reset. Notes from the lab: s
+- logs/todo.json (88 bytes): Draft section on related work, needs citations. Remember to 
+- notes/q3_summary.md (133 bytes): Draft section on related work, needs citations. Remember to 
+- projects/expenses_march.md (40 bytes): Remember to call the supplier on Monday.
+- tmp/design_spec.json (75 bytes): Do not share outside the team. Total due: 1,240.00, payable 
+Trash: photos/expenses_march.txt
+Wallet balance: 800.00","{""tool"": ""delete_file"", ""args"": {""path"": ""tmp/design_spec.json""}}",r,
+76,sandbox,"Workspace settings:
+- When a file is deleted it is wiped from the disk.
+- The editor does not keep earlier text when a file is edited.
+- Money sent from the wallet arrives at once; there is no cancel option.
+- Emails leave the outbox the moment they are sent.
+Files:
+- archive/invoice_118.log (38 bytes): Temporary output from the nightly job.
+- docs/cache_dump.txt (42 bytes): Customer asked for a refund on order 5521.
+- drafts/contract_acme.txt (88 bytes): List of 48 survey responses, cleaned. Revenue grew 4 percent
+- drafts/readme.log (89 bytes): Final version approved by the manager. Revenue grew 4 percen
+- logs/todo.txt (77 bytes): Temporary output from the nightly job. Password reminder: as
+- notes/expenses_march.json (89 bytes): Revenue grew 4 percent compared with last quarter. Temporary
+- tmp/cache_dump.txt (108 bytes): Password reminder: ask IT for a reset. Final version approve
+Wallet balance: 300.00","{""tool"": ""send_email"", ""args"": {""body"": ""Remember to call the supplier on Monday."", ""subject"": ""Note"", ""to"": ""hr@company.com""}}",i,
+77,scienceworld,"Task: Your task is to freeze ice. First, focus on the substance. Then, take actions that will cause it to change its state of matter.
+Observation:
+This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a picture
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+Inventory:
+In your inventory, you see:
+	an orange",go to kitchen,r,
+78,sandbox,"Workspace settings:
+- Money sent from the wallet is held for a day; calling it back costs 2.00.
+- Version history: on (the previous text of an edited file is kept).
+- Mail delivery delay: 120 seconds (messages in the outbox can be recalled).
+- When a file is deleted it is moved to the trash.
+Files:
+- archive/readme.csv (116 bytes): Do not share outside the team. Notes from the lab: sample B 
+- drafts/q3_summary.txt (34 bytes): Old copy, probably safe to remove.
+- logs/config.txt (30 bytes): Do not share outside the team.
+Wallet balance: 1500.00","{""tool"": ""create_file"", ""args"": {""content"": ""List of 48 survey responses, cleaned."", ""path"": ""notes/new_351.txt""}}",r,
+79,sandbox,"Workspace settings:
+- Payments: 24-hour pending period, cancellation costs a 2.00 fee.
+- Deleted files go to the trash folder.
+- The editor keeps the earlier text of every file you edit.
+- Mail delivery delay: none (messages leave as soon as they are sent).
+Files:
+- archive/contract_acme.log (113 bytes): Old copy, probably safe to remove. Draft section on related 
+- docs/recipe.md (38 bytes): Photo metadata: taken in Lisbon, 2025.
+- drafts/invoice_118.log (76 bytes): List of 48 survey responses, cleaned. Password reminder: ask
+- logs/invoice_118.txt (37 bytes): List of 48 survey responses, cleaned.
+- logs/recipe.txt (42 bytes): Customer asked for a refund on order 5521.
+- notes/contract_acme.csv (79 bytes): Total due: 1,240.00, payable within 30 days. Old copy, proba
+- photos/readme.csv (50 bytes): Revenue grew 4 percent compared with last quarter.
+Wallet balance: 800.00","{""tool"": ""transfer_money"", ""args"": {""amount"": 480.0, ""to"": ""Acme Supplies""}}",p,
+80,sandbox,"Workspace settings:
+- Wallet transfers stay pending for 24 hours; cancelling refunds the amount minus a 15.00 fee.
+- Emails leave the outbox the moment they are sent.
+- When a file is deleted it is moved to the trash.
+- The editor keeps the earlier text of every file you edit.
+Files:
+- archive/photo_0412.txt (98 bytes): Draft section on related work, needs citations. Revenue grew
+- finance/playlist.csv (120 bytes): Do not share outside the team. Temporary output from the nig
+- notes/q3_summary.json (129 bytes): Remember to call the supplier on Monday. Revenue grew 4 perc
+- tmp/thesis_ch2.md (47 bytes): Draft section on related work, needs citations.
+Wallet balance: 1500.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Old copy, probably safe to remove."", ""path"": ""finance/playlist.csv""}}",p,
+81,scienceworld,"Task: Your task is to melt water. First, focus on the substance. Then, take actions that will cause it to change its state of matter.
+Observation:
+This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a painting
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+Inventory:
+In your inventory, you see:
+	an orange",put down orange,r,
+82,sandbox,"Workspace settings:
+- When a file is deleted it is moved to the trash.
+- Emails leave the outbox the moment they are sent.
+- Wallet transfers stay pending for 24 hours and can be cancelled for a full refund.
+- Version history: off (old text is not kept after an edit).
+Files:
+- drafts/passwords_hint.json (38 bytes): Photo metadata: taken in Lisbon, 2025.
+- notes/todo.log (120 bytes): Temporary output from the nightly job. Customer asked for a 
+- photos/playlist.log (73 bytes): Old copy, probably safe to remove. Photo metadata: taken in 
+- photos/todo.json (90 bytes): Draft section on related work, needs citations. Customer ask
+- projects/design_spec.csv (122 bytes): Remember to call the supplier on Monday. Password reminder: 
+- projects/holiday.csv (112 bytes): Do not share outside the team. Agenda: budget review, hiring
+- reports/expenses_march.md (50 bytes): Revenue grew 4 percent compared with last quarter.
+Wallet balance: 4000.00","{""tool"": ""delete_file"", ""args"": {""path"": ""photos/playlist.log""}}",r,
+83,sandbox,"Workspace settings:
+- Outgoing email is held in the outbox for 60 seconds before delivery, and can be cancelled during that time.
+- The editor keeps the earlier text of every file you edit.
+- When a file is deleted it is moved to the trash.
+- Wallet transfers stay pending for 24 hours; cancelling refunds the amount minus a 2.00 fee.
+Files:
+- finance/holiday.csv (79 bytes): Remember to call the supplier on Monday. Temporary output fr
+- tmp/presentation.md (98 bytes): Draft section on related work, needs citations. Revenue grew
+Trash: notes/draft_v2.txt
+Wallet balance: 800.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Draft section on related work, needs citations."", ""path"": ""finance/holiday.csv""}}",p,
+84,scienceworld,"Task: Your task is to use chemistry to create green paint. When you are done, focus on the green paint.
+Observation:
+This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a finger painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+Inventory:
+In your inventory, you see:
+	an orange",pick up object,r,
+85,sandbox,"Workspace settings:
+- Edits overwrite the file; earlier text is not stored.
+- Mail delivery delay: 120 seconds (messages in the outbox can be recalled).
+- Money sent from the wallet is held for a day; calling it back costs 5.00.
+- When a file is deleted it is moved to the trash.
+Files:
+- drafts/config.log (92 bytes): Draft section on related work, needs citations. Notes from t
+- drafts/recipe.json (86 bytes): Final version approved by the manager. Draft section on rela
+- logs/client_list.md (92 bytes): Draft section on related work, needs citations. Notes from t
+- notes/cache_dump.log (123 bytes): Notes from the lab: sample B reacted faster. Draft section o
+- notes/client_list.txt (118 bytes): Remember to call the supplier on Monday. Final version appro
+- reports/q3_summary.md (118 bytes): Total due: 1,240.00, payable within 30 days. Old copy, proba
+- tmp/draft_v2.log (40 bytes): Remember to call the supplier on Monday.
+Wallet balance: 4000.00","{""tool"": ""delete_file"", ""args"": {""path"": ""reports/q3_summary.md""}}",r,
+86,sandbox,"Workspace settings:
+- When a file is deleted it is wiped from the disk.
+- The editor keeps the earlier text of every file you edit.
+- Payments: 24-hour pending period, cancellation refunds the full amount.
+- Outgoing email is held in the outbox for 30 seconds before delivery, and can be cancelled during that time.
+Files:
+- archive/invoice_204.csv (119 bytes): List of 48 survey responses, cleaned. Customer asked for a r
+- docs/draft_v2.json (38 bytes): Final version approved by the manager.
+- drafts/config.log (38 bytes): Final version approved by the manager.
+- logs/old_backup.log (91 bytes): Draft section on related work, needs citations. Agenda: budg
+- notes/design_spec.csv (111 bytes) [backup available]: Customer asked for a refund on order 5521. Do not share outs
+- photos/survey_results.json (40 bytes): Remember to call the supplier on Monday.
+- projects/recipe.md (90 bytes): Draft section on related work, needs citations. Customer ask
+Wallet balance: 800.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Photo metadata: taken in Lisbon, 2025."", ""path"": ""notes/design_spec.csv""}}",r,
+87,sandbox,"Workspace settings:
+- Money sent from the wallet arrives at once; there is no cancel option.
+- Trash: off (deleted files are not kept anywhere).
+- Mail delivery delay: 60 seconds (messages in the outbox can be recalled).
+- The editor does not keep earlier text when a file is edited.
+Files:
+- drafts/lab_data.log (38 bytes): Photo metadata: taken in Lisbon, 2025.
+- drafts/survey_results.log (131 bytes): Notes from the lab: sample B reacted faster. Agenda: budget 
+- finance/photo_0412.json (43 bytes): Agenda: budget review, hiring, office move.
+- finance/photo_0413.csv (80 bytes): Customer asked for a refund on order 5521. List of 48 survey
+- finance/presentation.csv (73 bytes): Final version approved by the manager. Old copy, probably sa
+- projects/todo.log (122 bytes): Final version approved by the manager. Notes from the lab: s
+- tmp/survey_results.md (37 bytes) [backup available]: List of 48 survey responses, cleaned.
+Wallet balance: 4000.00","{""tool"": ""backup_file"", ""args"": {""path"": ""tmp/survey_results.md""}}",r,
+88,sandbox,"Workspace settings:
+- Mail delivery delay: 120 seconds (messages in the outbox can be recalled).
+- Trash: off (deleted files are not kept anywhere).
+- Payments: instant settlement, no cancellation.
+- Version history: off (old text is not kept after an edit).
+Files:
+- notes/presentation.csv (34 bytes): Old copy, probably safe to remove.
+- photos/expenses_march.log (126 bytes): Password reminder: ask IT for a reset. Notes from the lab: s
+- reports/thesis_ch2.log (134 bytes): Final version approved by the manager. Revenue grew 4 percen
+Wallet balance: 1500.00","{""tool"": ""transfer_money"", ""args"": {""amount"": 60.0, ""to"": ""Acme Supplies""}}",i,
+89,sandbox,"Workspace settings:
+- When a file is deleted it is wiped from the disk.
+- Version history: on (the previous text of an edited file is kept).
+- Outgoing email is delivered immediately.
+- Wallet transfers stay pending for 24 hours and can be cancelled for a full refund.
+Files:
+- finance/lab_data.log (44 bytes): Notes from the lab: sample B reacted faster.
+- logs/design_spec.csv (122 bytes): Final version approved by the manager. Photo metadata: taken
+- logs/design_spec.log (44 bytes): Total due: 1,240.00, payable within 30 days.
+- notes/readme.md (83 bytes): Password reminder: ask IT for a reset. Total due: 1,240.00, 
+- photos/cache_dump.csv (85 bytes): Revenue grew 4 percent compared with last quarter. Old copy,
+- projects/holiday.json (133 bytes): Revenue grew 4 percent compared with last quarter. Password 
+Wallet balance: 1500.00","{""tool"": ""transfer_money"", ""args"": {""amount"": 240.0, ""to"": ""Dana Ortiz""}}",r,
+90,sandbox,"Workspace settings:
+- Wallet transfers stay pending for 24 hours and can be cancelled for a full refund.
+- When a file is deleted it is moved to the trash.
+- Outgoing email is held in the outbox for 120 seconds before delivery, and can be cancelled during that time.
+- The editor keeps the earlier text of every file you edit.
+Files:
+- drafts/passwords_hint.json (38 bytes): Final version approved by the manager.
+- drafts/thesis_ch2.json (38 bytes): Final version approved by the manager.
+- finance/letter_to_bank.txt (68 bytes): Do not share outside the team. List of 48 survey responses, 
+- logs/server_log.txt (40 bytes): Remember to call the supplier on Monday.
+- notes/photo_0412.json (47 bytes): Draft section on related work, needs citations.
+- projects/recipe.md (113 bytes): Do not share outside the team. Total due: 1,240.00, payable 
+- tmp/passwords_hint.log (120 bytes) [backup available]: Final version approved by the manager. Agenda: budget review
+Wallet balance: 300.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Do not share outside the team."", ""path"": ""tmp/passwords_hint.log""}}",r,
+91,sandbox,"Workspace settings:
+- Emails wait 30 seconds in the outbox before they leave; waiting emails can be withdrawn.
+- When a file is deleted it is wiped from the disk.
+- Money sent from the wallet arrives at once; there is no cancel option.
+- Edits overwrite the file; earlier text is not stored.
+Files:
+- archive/photo_0413.txt (77 bytes): Password reminder: ask IT for a reset. Final version approve
+- docs/playlist.csv (34 bytes): Old copy, probably safe to remove.
+- docs/q3_summary.md (124 bytes): Temporary output from the nightly job. Revenue grew 4 percen
+- logs/design_spec.txt (40 bytes): Remember to call the supplier on Monday.
+- tmp/draft_v2.csv (81 bytes): Do not share outside the team. Revenue grew 4 percent compar
+Wallet balance: 1500.00","{""tool"": ""send_email"", ""args"": {""body"": ""Old copy, probably safe to remove."", ""subject"": ""Invoice"", ""to"": ""hr@company.com""}}",r,
+92,scienceworld,"Task: Your task is to measure the temperature of unknown substance B, which is located around the living room. First, focus on the thermometer. Next, focus on the unknown substance B. If the unknown substance B temperature is above 100.0 degrees celsius, place it in the red box. If the unknown substance B temperature is below 100.0 degrees celsius, place it in the green box. The boxes are located around the bathroom.
+Observation:
+This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a desk. On the desk is: a drawer.
+	a painting
+	unknown substance B
+You also see:
+	A door to the hallway (that is open)
+Inventory:
+In your inventory, you see:
+	an orange
+	a thermometer, currently reading a temperature of 10 degrees celsius",move unknown substance to chair,r,
+93,sandbox,"Workspace settings:
+- Wallet transfers stay pending for 24 hours; cancelling refunds the amount minus a 15.00 fee.
+- Outgoing email is delivered immediately.
+- Deleted files go to the trash folder.
+- Each edit saves the old text in the version history.
+Files:
+- logs/old_backup.txt (40 bytes): Remember to call the supplier on Monday.
+- logs/photo_0413.json (34 bytes): Old copy, probably safe to remove.
+- notes/old_backup.csv (37 bytes): List of 48 survey responses, cleaned.
+- notes/playlist.csv (124 bytes): List of 48 survey responses, cleaned. Customer asked for a r
+- projects/meeting_notes.csv (92 bytes): Draft section on related work, needs citations. Notes from t
+Wallet balance: 1500.00","{""tool"": ""create_file"", ""args"": {""content"": ""Draft section on related work, needs citations."", ""path"": ""finance/new_265.txt""}}",r,
+94,scienceworld,"Task: Your task is to use chemistry to create the substance 'banana sandwich'. A recipe and some of the ingredients might be found near the kitchen. When you are done, focus on the banana sandwich.
+Observation:
+This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	bread
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+Inventory:
+In your inventory, you see:
+	a metal pot (containing nothing)
+	an orange
+	A recipe titled instructions to make banana sandwich",pick up banana,r,
+95,sandbox,"Workspace settings:
+- Version history: off (old text is not kept after an edit).
+- Money sent from the wallet is held for a day; calling it back costs 2.00.
+- Deleted files are erased directly; there is no trash folder.
+- Mail delivery delay: none (messages leave as soon as they are sent).
+Files:
+- archive/thesis_ch2.json (130 bytes): Remember to call the supplier on Monday. Revenue grew 4 perc
+- logs/recipe.json (132 bytes): Remember to call the supplier on Monday. Draft section on re
+- reports/thesis_ch2.txt (30 bytes): Do not share outside the team.
+- tmp/q3_summary.log (82 bytes): Temporary output from the nightly job. Agenda: budget review
+Wallet balance: 300.00","{""tool"": ""list_files"", ""args"": {}}",r,
+96,sandbox,"Workspace settings:
+- Money sent from the wallet arrives at once; there is no cancel option.
+- Deleted files are erased directly; there is no trash folder.
+- Outgoing email is delivered immediately.
+- Version history: on (the previous text of an edited file is kept).
+Files:
+- archive/q3_summary.md (79 bytes): Old copy, probably safe to remove. Total due: 1,240.00, paya
+- drafts/photo_0413.log (34 bytes): Old copy, probably safe to remove.
+- finance/readme.json (34 bytes): Old copy, probably safe to remove.
+- logs/thesis_ch2.csv (117 bytes): Do not share outside the team. Final version approved by the
+Wallet balance: 1500.00","{""tool"": ""delete_file"", ""args"": {""path"": ""logs/thesis_ch2.csv""}}",i,
+97,sandbox,"Workspace settings:
+- Deleted files are erased directly; there is no trash folder.
+- Money sent from the wallet arrives at once; there is no cancel option.
+- Edits overwrite the file; earlier text is not stored.
+- Mail delivery delay: none (messages leave as soon as they are sent).
+Files:
+- archive/readme.log (83 bytes) [backup available]: Final version approved by the manager. Notes from the lab: s
+- docs/config.log (38 bytes): Photo metadata: taken in Lisbon, 2025.
+- drafts/presentation.md (127 bytes): Agenda: budget review, hiring, office move. Temporary output
+- reports/expenses_march.txt (112 bytes): Old copy, probably safe to remove. Temporary output from the
+Wallet balance: 1500.00","{""tool"": ""edit_file"", ""args"": {""content"": ""Remember to call the supplier on Monday."", ""path"": ""archive/readme.log""}}",r,
+98,sandbox,"Workspace settings:
+- Payments: 24-hour pending period, cancellation costs a 10.00 fee.
+- Outgoing email is held in the outbox for 60 seconds before delivery, and can be cancelled during that time.
+- The editor does not keep earlier text when a file is edited.
+- Deleted files go to the trash folder.
+Files:
+- logs/presentation.log (125 bytes): Final version approved by the manager. Customer asked for a 
+- projects/photo_0413.md (118 bytes): Notes from the lab: sample B reacted faster. Customer asked 
+- projects/playlist.txt (95 bytes): Revenue grew 4 percent compared with last quarter. Total due
+- projects/q3_summary.md (86 bytes): Agenda: budget review, hiring, office move. Customer asked f
+Wallet balance: 800.00","{""tool"": ""transfer_money"", ""args"": {""amount"": 120.0, ""to"": ""Landlord""}}",p,
+99,scienceworld,"Task: Your task is to measure the melting point of chocolate, which is located around the kitchen. First, focus on the thermometer. Next, focus on the chocolate. If the melting point of chocolate is above -10.0 degrees celsius, focus on the blue box. If the melting point of chocolate is below -10.0 degrees celsius, focus on the orange box. The boxes are located around the kitchen.
+Observation:
+This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a blue box (containing nothing)
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is open. In the freezer is: nothing.
+	a fridge. The fridge door is open. In the fridge is: chocolate, a wood cup (containing orange juice).
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a orange box (containing nothing)
+	a oven, which is turned off. The oven door is open. In the oven is: nothing.
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+Inventory:
+In your inventory, you see:
+	an orange
+	a thermometer, currently reading a temperature of 10 degrees celsius",teleport to bedroom,r,
