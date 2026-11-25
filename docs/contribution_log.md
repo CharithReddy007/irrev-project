@@ -12,7 +12,7 @@ I worked through the RQ2 sections of the cluster notebook for Qwen2.5-7B and Lla
 
 I worked through the RQ3 sections of the cluster notebook for Qwen2.5-7B and Llama-3.1-8B to understand how the agent-behaviour experiments were set up and run. I owned the RQ3 analysis, examining agent episodes, caution measures, K, A and the blindness gap to assess how reversibility knowledge relates to actions. As annotator B, I independently labelled the same 100 QC pairs without seeing the automatic labels or annotator A's decisions. I also checked the RQ3 report section against the results and prepared the RQ3 presentation material.
 
-**Srikar Karthik (SE23UCSE104) –** sandbox and labeller review, references and presentation
+**Srikar Karthik (SE23UCSE104) –** sandbox and labeller review, references
 
 I studied the sandbox and reversibility-labelling code and the corresponding notebook sections, which produce the data used in the Qwen2.5-7B and Llama-3.1-8B experiments. I reviewed the sandbox settings, tools and minimal pairs, together with the reversibility labeller's undo search, exact versus approximate state keys and search horizon. I checked that the dataset and labelling documentation matched these components and prepared the corresponding presentation material. I also contributed to verifying bibliography entries against the original papers and reviewed the full report.
 
